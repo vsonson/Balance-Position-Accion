@@ -1,0 +1,46 @@
+<Page loaded="loaded" height="70%" width="90%">
+
+  <StackLayout class="modal-view-style modal"   verticalAlignment="top"  >
+    <FlexboxLayout class="lgnlayout">
+
+        <FlexboxLayout justifyContent="space-between">
+  <Image src="" width="20" height="20" ></Image>
+  <Image src="" width="20" height="20" ></Image>
+  <Image src="res://x_grey"  width="40" height="40" (tap)="close()"></Image>
+  </FlexboxLayout>
+        
+        <FlexboxLayout class="list" >
+           <FlexboxLayout class="item" alignItems="center" >
+              <StackLayout>
+                <Label text="How difficult was it to complete the exercise?" textWrap="true" class="smallLabel"></Label>
+                <ListPicker [items]="diff"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,'1')" class="p-15" width="200" height="100"></ListPicker>
+              </StackLayout>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="item" >
+              <StackLayout>
+                  <Label text="How mindful were you?" class="smallLabel" ></Label>
+                  <ListPicker [items]="mind"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,'2')" class="p-15" width="200" height="100"></ListPicker>
+                </StackLayout>
+          </FlexboxLayout> 
+          
+        </FlexboxLayout>
+
+        <FlexboxLayout justifyContent="space-between">
+          <FlexboxLayout flexDirection="column" (tap)="gotoNotebook()">
+  <Image src="res://notebook_blue" width="50" height="50" ></Image>
+   <Label text="Make a note"  class="iconLable"></Label>
+</FlexboxLayout>
+<FlexboxLayout flexDirection="column">
+  <Image src="res://share_old_blue" width="50" height="50" ></Image>
+   <Label text="Share"  class="iconLable"></Label>
+</FlexboxLayout>
+<FlexboxLayout flexDirection="column">
+  <Image src="res://check_blue"  width="50" height="50" (tap)="close()"></Image>
+   <Label text="Done"  class="iconLable" (tap)="close()"></Label>
+</FlexboxLayout>
+  </FlexboxLayout>
+        
+    </FlexboxLayout>
+  </StackLayout>
+</Page>

@@ -1,0 +1,53 @@
+<FlexboxLayout class="_layout_">
+  <FlexboxLayout class="_hdr_">
+    <!-- <Image src="~/images/Icons/Chevron/noun_730214_555555.png" class="_bck"  width="20" height="25" ></Image> -->
+    <Image src="res://back"  width="30" height="30" stretch="aspectFill" verticalAlignment="center" [nsRouterLink]="['/home/dashboard']"></Image>
+    <FlexboxLayout class="_date">
+      <FlexboxLayout class='prev active'>
+        <AbsoluteLayout>
+          <button (tap)="prevDate()"></button>
+          <button class="_border" (tap)="prevDate()"></button>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+      <Label [text]="getDateFormatString(date)"></Label>
+      <FlexboxLayout class='next' [class.active]="!disableNextDateBtn">
+        <AbsoluteLayout>
+          <button (tap)="nextDate()"></button>
+          <button (tap)="nextDate()" class="_border"></button>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+    </FlexboxLayout>
+    <!-- <Image src="~/images/Icons/playbook/noun_1642507_005f86.png" class="_img"  width="50" height="50"></Image> -->
+    <Image src="res://focus_grey" width="30" height="30"></Image>
+  </FlexboxLayout>
+  <FlexboxLayout class="_cont_">
+  
+<StackLayout orientation="vertical" class="layout">
+
+  <Label text="Focus" class="headingLabel mar15"></Label>
+  <FlexboxLayout class="list">
+    <FlexboxLayout class="item">
+      <StackLayout>
+        <Label text="How focused are you today?" textWrap="true" class="questionLabel"></Label>
+        <ListPicker [items]="focusList" class="choices" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)" width="100%" height="120" horizontalAlignment="center"></ListPicker>
+      </StackLayout>
+    </FlexboxLayout> 
+   </FlexboxLayout>
+</StackLayout>
+  </FlexboxLayout>
+
+   
+<StackLayout  orientation="horizontal" horizontalAlignment="center" verticalAlignment="bottom" class="stackWidth">
+  <StackLayout (tap)="openNote()">
+    <Image src="res://notebook_blue"  width="30" height="30" stretch="aspectFill" horizontalAlignment="center"></Image>
+    <Label text="Make A Note" class="trackLabel" horizontalAlignment="center"></Label> 
+  </StackLayout>
+  <StackLayout (tap)="done()" class="marleft5"> 
+    <Image [src]="trackDone ? 'res://check_green' : 'res://check_blue'" width="30" height="30" stretch="aspectFill" horizontalAlignment="center"></Image>
+    <Label [text]="'Done'" [color]="trackDone ? 'green' : '#005f86'"  class="trackLabel" horizontalAlignment="center"></Label>
+  </StackLayout>
+</StackLayout>
+
+</FlexboxLayout>
+
+<!-- <ActivityIndicator row="1" #activityIndicator busy="true" (busyChange)="onBusyChanged($event)" width="100" height="100" class="activity-indicator"></ActivityIndicator> -->

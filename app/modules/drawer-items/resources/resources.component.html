@@ -1,0 +1,61 @@
+<ScrollView>
+    <StackLayout>
+        <FlexboxLayout justifyContent="space-between">
+            <Image src="res://back" width="30" height="30" style="margin-left: 20; margin-top: 20" (tap)="goBack()"></Image>
+            <label text="You are not alone." class="heading" style="margin-top: 10"></label>
+            <Image src="" width="20" height="25"></Image>
+        </FlexboxLayout>
+
+        <FlexboxLayout class="line_full mar_left_50"></FlexboxLayout>
+        
+        <FlexboxLayout (tap)="call911()" class="mar_left_20">
+            <Image class="circle" src="res://phone_blue" width="50" height="50"></Image>
+            <FlexboxLayout flexDirection="column" width="80%">
+                <label text="Call 911" class="boldLable_resources"></label>
+                <label text="Call to recieve immidiate help." textWrap="true" class="normLable_resources"></label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+
+
+        <FlexboxLayout class="line"></FlexboxLayout>
+        <FlexboxLayout (tap)="callSuicidePrevent()" class="mar_left_20">
+            <Image class="circle" src="res://phone_blue" width="50" height="50"></Image>
+            <FlexboxLayout flexDirection="column" width="80%">
+                <label text="Call the national suicide prevention lifeline" textWrap="true" class="boldLable_resources"></label>
+                <label text="Call to to speak to a trained professional now." textWrap="true" class="normLable_resources"></label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+
+
+        <FlexboxLayout class="line"></FlexboxLayout>
+        <FlexboxLayout (tap)="callDomesticVoilence()" class="mar_left_20">
+            <Image class="circle" src="res://phone_blue" width="50" height="50"></Image>
+            <FlexboxLayout flexDirection="column" width="80%">
+                <label text="Call the National Domestic Voilence Hotline" textWrap="true" class="boldLable_resources"></label>
+                <label text="Call to speak to a trained operator now." textWrap="true" class="normLable_resources"></label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+
+        <FlexboxLayout class="line"></FlexboxLayout>
+        <FlexboxLayout (tap)="callTrevorLifeline()" class="mar_left_20">
+            <Image class="circle" src="res://phone_blue" width="50" height="50"></Image>
+            <FlexboxLayout flexDirection="column" width="80%">
+                <label text="Call the TreverLifeline" textWrap="true" class="boldLable_resources"></label>
+                <label text="Call to speak to a trained counsoler now." textWrap="true" class="normLable_resources"></label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+
+
+        <FlexboxLayout class="line"></FlexboxLayout>
+        <FlexboxLayout justifyContent="space-between" (tap)="messageHelp()" class="mar_left_20">
+            <Image class="circle" src="res://message_grey" width="50" height="50" style="color:#0B6084;"></Image>
+            <FlexboxLayout flexDirection="column" width="80%">
+                <label text="Text NAMI" class="boldLable_resources_msg"></label>
+                <label class="normLable_resources_msg" text="Connect with a tarined counselor now by texting NAMI to the resource ." textWrap="true"></label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+
+
+        <FlexboxLayout class="line"></FlexboxLayout>
+    </StackLayout>
+</ScrollView>

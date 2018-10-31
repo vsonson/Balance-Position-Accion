@@ -1,0 +1,9 @@
+
+	<FlexboxLayout class="track-root" height="100%" width="100%">
+		<FlexboxLayout class="content_" (swipe)="onSwipe($event)">
+			<router-outlet></router-outlet>
+		</FlexboxLayout>
+		<FlexboxLayout class="dots">
+			<Label *ngFor="let item of trackRoutingList; let index=index " [class.active]="index==activeRouterIndex"></Label>
+		</FlexboxLayout>
+	</FlexboxLayout>

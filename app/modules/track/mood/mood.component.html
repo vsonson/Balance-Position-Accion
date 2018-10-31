@@ -1,0 +1,68 @@
+<FlexboxLayout class="_layout_">
+  <FlexboxLayout class="_hdr_">
+    <!-- <Image src="~/images/Icons/Chevron/noun_730214_555555.png" class="_bck"  width="20" height="25" ></Image> -->
+    <Image src="res://back"  width="30" height="30" stretch="aspectFill" verticalAlignment="center" [nsRouterLink]="['/home/dashboard']"></Image>
+    <FlexboxLayout class="_date">
+      <FlexboxLayout class='prev active'>
+        <AbsoluteLayout>
+          <button (tap)="prevDate()"></button>
+          <button class="_border" (tap)="prevDate()"></button>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+      <Label [text]="getDateFormatString(date)"></Label>
+      <FlexboxLayout class='next' [class.active]="!disableNextDateBtn">
+        <AbsoluteLayout>
+          <button (tap)="nextDate()"></button>
+          <button (tap)="nextDate()" class="_border"></button>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+    </FlexboxLayout>
+    <!-- <Image src="~/images/Icons/playbook/noun_1642507_005f86.png" class="_img"  width="50" height="50"></Image> -->
+    <Image src="res://mood_grey" width="30" height="30"></Image>
+  </FlexboxLayout>
+  <FlexboxLayout class="_cont_">
+    
+    
+<FlexboxLayout orientation="vertical" class="layout">
+
+  <Label text="Mood" class="headingLabel"></Label>
+
+  <Label text="How are you feeling?" class="messagelabel" ></Label>
+  
+  <StackLayout orientation="horizontal" horizontalAlignment="center" verticleAlignment="center" class="smiley">
+    <StackLayout (tap)="selectMood('Awful', 1)">
+        <Image [src]="(moodLevel == 1  ?  'res://mood_awful_blue' : 'res://mood_awful_grey')"></Image>
+        <Label text="Awful" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="selectMood('Bad', 2)">
+        <Image [src]="(moodLevel == 2  ?  'res://mood_bad_blue' : 'res://mood_bad_grey')"></Image>
+        <Label text="Bad" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="selectMood('Ehhh', 3)" marginLeft="-4" marginRight="-3">
+        <Image [src]="(moodLevel == 3  ? 'res://mood_ehh_blue' : 'res://mood_ehh_grey')" width="76" height="76" marginTop="-8" ></Image>
+        <Label text="Ehhh" horizontalAlignment="center" marginTop="-6"></Label>
+    </StackLayout>
+    <StackLayout (tap)="selectMood('Good', 4)">
+        <Image [src]="(moodLevel == 4  ? 'res://mood_good_blue' : 'res://mood_good_grey')"></Image>
+        <Label text="Good" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="selectMood('Great', 5)">
+        <Image [src]="(moodLevel == 5  ?  'res://mood_great_blue' : 'res://mood_great_grey')"></Image>
+        <Label text="Great" horizontalAlignment="center"></Label>
+    </StackLayout>
+  </StackLayout>
+  
+</FlexboxLayout>
+  </FlexboxLayout>
+  <StackLayout  orientation="horizontal" horizontalAlignment="center" class="stackWidth actions">
+    <StackLayout (tap)="openNote()">
+      <Image  src="res://notebook_blue"  stretch="aspectFill" horizontalAlignment="center" width="30" height="30"></Image>
+      <Label text="Make A Note" class="trackLabel" horizontalAlignment="center"></Label> 
+    </StackLayout>
+    <StackLayout (tap)="done()" class="marleft5"> 
+      <Image width="30" height="30" [src]="trackDone ? 'res://check_green' : 'res://check_blue'"  stretch="aspectFill" horizontalAlignment="center"></Image>
+      <Label [text]="'Done'" [color]="trackDone ? 'green' : '#005f86'"  class="trackLabel" horizontalAlignment="center"></Label>
+    </StackLayout>
+
+  </StackLayout>  
+</FlexboxLayout>

@@ -1,0 +1,214 @@
+<ScrollView height="100%">
+
+  <!-- user content -->
+
+  <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Awesome job! A healthy interest in your daily activities is a positive sign." textWrap="true"></Label>
+             
+                  <Label text="Challenge yourself to cultivate relationships with people outside of athletics. Meeting new people outside of our usual circle deepens our empathy and gives us a different outlet." textWrap="true"></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Find a new "></Span>
+                      <Span text="hobby" class="underline"></Span>
+                      <Span text=" or a skill that you would enjoy working towards. It’s important to find fulfillment outside of athletic participation to build our sense of self."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>  
+                    <Label text="a. Hobbies:"></Label>
+                   
+                      <Label textWrap="true" text="i.   Volunteering "></Label>
+                      <Label textWrap="true" text="ii.  Music, arts & theatre"></Label>
+                      <Label textWrap="true" text="iii. A club or group outside of athletics"></Label>
+                      <Label textWrap="true" text="iv.  Cooking"></Label>
+                      <Label text="" ></Label>  
+                 
+                   <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Remain centered and balanced by practicing mindfulness. Listen to the " ></Span>
+                      <Span text="Preparing for Competition" class="underline"></Span>
+                      <Span text=" single before your activities.  " ></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+
+           
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Sometimes, our daily routine and obligations can wear on us or feel overwhelming. Let’s figure out a way to feel better about the things you do day-to-day. " textWrap="true"></Label>
+             
+                  <Label textWrap="true">
+                    <FormattedString>
+                      <Span text="Find time in the week to dedicate to activities that you love to do. Take a look at your schedule and commit to doing at least two "></Span>
+                      <Span text="activities"></Span>
+                      <Span text=" outside of your “to do” list that you enjoy doing. "></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>  
+                    <Label text="a. Activities:"></Label>
+                    
+                      <Label textWrap="true" text="i.   Making a new recipe you’ve been meaning to try "></Label>
+                      <Label textWrap="true" text="ii.  Attending a show, play, or meeting with friends you don’t see as much"></Label>
+                      <Label textWrap="true" text="iii. Participating in a school activity outside of athletics "></Label>
+                      <Label textWrap="true" text="iv.  Getting off campus to spend time in nature or exploring the culture of the area."></Label>
+                      <Label text="" ></Label>  
+                   <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Stress, pressure, and demands can drain us and lessen our interest in our usual schedule. Manage this with some mindfulness practice. Try listening to the " ></Span>
+                      <Span text="Balance Fundamental Program" class="underline"></Span>
+                      <Span text=" to help manage what you’re feeling."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text="Prioritize your schedule. Make more time for things that fulfill you by getting rid of non-essential obligations. Organize your “to do” list by importance and urgency. Get rid of items that are not important, not urgent, or both. "></Label>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="If the activities that fill our lives are not fulfilling us or make us cringe, it’s time to make some changes. Let’s get a plan in action to take control and get back to enjoying our daily activities." textWrap="true"></Label>
+             
+                  <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="At this level of disinterest in your activities, there are a number of concerns. Reach out to someone in your "></Span>
+                      <Span text="Network" class="underline"></Span>
+                      <Span text=" to talk to.  It’s also time to speak with a professional. Let a counselor, psychologist, or social worker help you make a plan to feel better."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="The weight of your schedule has a big impact on how you feel. Manage the weight and stress of responsibilities by listening to the "></Span>
+                      <Span text="Reflecting on Performance single." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="gotoNotebook()">
+                    <FormattedString>
+                      <Span text="Reflect or brainstorm in your " ></Span>
+                      <Span text="Notebook" class="underline"></Span>
+                      <Span text=" about where you in your schedule you could add in some activities that make you happy. These activities should be something you don’t get to do often."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>  
+                    <Label text="a. Activities:"></Label>
+                   
+                      <Label textWrap="true" text="i.   Hang out with an animal. Take a friend’s dog for a walk. "></Label>
+                      <Label textWrap="true" text="ii.  Do nothing. Sometimes we just need to have some time to be lazy and decompress. "></Label>
+                      <Label textWrap="true" text="iii. Go see a new movie with friends you’ve been meaning to see "></Label>
+                      <Label textWrap="true" text="iv.  Participate in something outside of athletics. Attend a club meeting, see a concert or play around campus, or volunteer."></Label>
+                      <Label textWrap="true" text="v.   What else can you do for YOU?"></Label>
+                      <Label text="" ></Label>  
+                      <Label textWrap="true" (tap)="gotoResources()">
+                          <FormattedString>
+                              <Span text="*Remember, text and call options in the "></Span>
+                              <Span text=" Resources " class="underline"></Span>
+                              <Span text=" page are always available in the event of emergency."></Span>
+                          </FormattedString>
+                        </Label>
+                
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+  
+            </StackLayout>
+          </StackLayout>
+
+        </FlexboxLayout> 
+    </StackLayout>
+
+
+    <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="It’s important to encourage the relationship between putting the work in to take care of oneself and feeling well even when they’re “in the green zone.” Reach out (message icon), acknowledge specific efforts you’ve seen out of them, and encourage them to keep it going."></Label>
+                  <Label textWrap="true"  text="Help them cultivate a sense of self outside of athletics. When talking with them, place value on activities, friendships, and aspirations outside of their athlete persona. Follow up and ask them about how this is going over time. "></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/concussion-diagnosis-and-management-best-practices')">
+                    <FormattedString>
+                      <Span text="Let them know how you’re proud that they’re managing their schedule so well. Remind them that they can utilize the "></Span>
+                      <Span text="Mindfulness for Stress" class="underline"></Span>
+                      <Span text="program to help keep them balanced."></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Continually invest in the athlete in all areas of their life. It’s important they have interests and hobbies outside of their sport.  The more they trust that you value and care for their entire self, the more likely they will be to reach out when they need help. "></Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label text="a. Examples of different areas to invest in:"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   A club they’re in "></Label>
+                      <Label textWrap="true" text="ii.  Friends outside of the team"></Label>
+                      <Label textWrap="true" text="iii. How their family is doing"></Label>
+                      <Label textWrap="true" text="iv.  Hobbies or different skills they’re working on"></Label>
+                      <Label textWrap="true" text="v.   Projects they’re working on for school"></Label>
+                    </StackLayout>
+                  </StackLayout>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="Take a look at their schedule and empathize with their perception. When you talk with them, encourage them to take some time for themself. Help them prioritize their list of demands and come up with some activities they can do this week."></Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label text="a. Activities:"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Cooking or baking a new recipe they’ve been meaning to try"></Label>
+                      <Label textWrap="true" text="ii.  Attending a show, play, or meeting with friends they don’t see as much"></Label>
+                      <Label textWrap="true" text="iii. Participating in an on campus group or club"></Label>
+                      <Label textWrap="true" text="iv.  Getting off campus to spend time in nature or exploring the culture of the area"></Label>
+                    </StackLayout>
+                  </StackLayout>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Acknowledge and validate the demands and pressures they’re experiencing. Offer that they try the "></Span>
+                      <Span text=" Mindfulness for Performance program. " class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="Help the {{user.namee}} find a health professional to work with. Their lack of interest in their daily activities is alarming.  Discuss different resources available within the athletic department and around campus like the counseling center, psychologists, or social workers. "></Span>
+                      <Span text="Follow protocol, and make the referral when it’s time. " class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" text="Listen to what they’re explaining when they talk about their experience. Thank them for sharing their feelings with you, validate what they’re feeling, and ask how you can help support them, perhaps by helping them prioritize their scheduled activities. "></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="Encourage {{user.name}} to spend some time doing "></Span>
+                      <Span text="activities outside of their usual schedule." class="underline"></Span>
+                      <Span text="When things get tough with specific areas, it’s important to utilize areas outside of the troubling persona that can help ground them."></Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label text="a. Activity Examples:"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Unplug, put their phone away, and get outside"></Label>
+                      <Label textWrap="true" text="ii.  Spend time with friends they haven’t seen lately"></Label>
+                      <Label textWrap="true" text="iii. Participate in a club or group not related to athletics"></Label>
+                      <Label textWrap="true" text="iv.  Help others by volunteering."></Label>
+                    </StackLayout>
+                  </StackLayout>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+-->
+
+
+</ScrollView>

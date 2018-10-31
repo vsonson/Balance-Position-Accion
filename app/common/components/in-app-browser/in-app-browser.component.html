@@ -1,0 +1,6 @@
+<ActionBar android:title="{{url}}">
+	 <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<GridLayout rows="*" columns="*" height='100%'>
+    <WebView #myWebView row="0" col="0" [src]="url"></WebView>
+</GridLayout>

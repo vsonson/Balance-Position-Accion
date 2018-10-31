@@ -1,0 +1,35 @@
+.lgnlayout {
+    height: 100%;
+    flex-direction: column;
+}
+.lgnlayout .pageTitle {
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 120px;
+}
+
+.lgnlayout>.list {
+  flex-grow: 1;
+  flex-direction: column;
+  
+}
+.lgnlayout>.list>.item {
+  margin: 41px 0;
+  justify-content: center;
+}
+.smallLabel {
+ font-size: 18px;
+ color: #888b8d;
+ 
+}
+.iconLable {
+  font-size: 18px;
+  color: #005f86;
+  
+}
+.options {
+    font-size: 15px;
+    color: #005f86;
+    
+  }

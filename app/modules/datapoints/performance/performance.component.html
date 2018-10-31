@@ -1,0 +1,57 @@
+
+<StackLayout orientation="vertical" class="dt-layout">
+
+  <FlexboxLayout orientation="horizontal" verticalAlignment="top" class="hdr__">
+    <Image src="res://back"   width="30" height="30" style="margin-left: 10;" stretch="aspectFill" verticalAlignment="center" (tap)="goBack()"></Image>
+    <Label text="My Performance" class="headingLabel" verticalAlignment="center"></Label>
+    <FlexboxLayout style="margin-right:10;" verticalAlignment="center">
+      <Image src="res://performance_grey"  width="40" height="40"></Image>
+    </FlexboxLayout>
+  </FlexboxLayout>
+  
+  <StackLayout orientation="vertical" class="content__">
+    <!-- <ScrollView class="con__" orientation="vertical" height="100%"> -->
+
+      <StackLayout class="_space"></StackLayout>
+
+      <Stacklayout class="_lbls">
+        <Label text="Overall - school, sports, life - how'd I perform?" class="_sub"></Label>
+      </Stacklayout>
+
+      <StackLayout height="500px" width="100%">
+        <RadCartesianChart tkExampleTitle tkToggleNavButton class="chart" verticalAlignment="center">
+          <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+          <LinearAxis tkCartesianVerticalAxis labelTextColor="#fff"></LinearAxis>
+          <LineSeries seriesName="Spline" tkCartesianSeries [items]="graphData" categoryProperty="Day" valueProperty="PerformanceLevel"></LineSeries>
+          <Palette tkCartesianPalette seriesName="Spline">
+            <PaletteEntry tkCartesianPaletteEntry strokeColor="#3669C9" strokeWidth="1"></PaletteEntry>
+          </Palette>
+        </RadCartesianChart>
+      </StackLayout>
+
+      <StackLayout orientation="vertical" verticalAlignment="bottom"  class="_info">
+          <StackLayout orientation="vertical">
+          <Label text="Why do we track performance?" horizontalAlignment="center"></Label>
+          <Image src="res://info_blue"  width="20" height="20" horizontalAlignment="center" stretch="aspectFill"  (tap)="openInfo()"></Image>
+          </StackLayout>
+      </StackLayout>
+  
+      <FlexboxLayout orientation="horizontal" class="_actns" height="25%" >
+        <StackLayout class="stackWidth" (tap)="trackPerformance()">
+            <Image src="res://track_blue"   stretch="aspectFill" horizontalAlignment="center"></Image>
+            <Label text="Track Performance" class="trackLabel" horizontalAlignment="center"></Label>
+        </StackLayout>
+        <StackLayout class="stackWidth" (tap)="performancePlaybook()"> 
+            <Image src="res://playbook_blue"   stretch="aspectFill" horizontalAlignment="center"></Image>
+            <Label text="Playbook" class="trackLabel" horizontalAlignment="center"></Label>
+        </StackLayout>
+        <StackLayout class="stackWidth" (tap)="openNote()">
+            <Image src="res://notebook_blue"   stretch="aspectFill" horizontalAlignment="center"></Image>
+            <Label text="Make A Note" class="trackLabel" horizontalAlignment="center"></Label>
+        </StackLayout>
+      </FlexboxLayout>
+  
+  </StackLayout>
+  
+</StackLayout>
+  

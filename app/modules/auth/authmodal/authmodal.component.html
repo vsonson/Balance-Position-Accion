@@ -1,0 +1,93 @@
+<Page loaded="loaded" height="70%" width="90%">
+
+  <StackLayout class="modal-view-style modal"   verticalAlignment="top"  >
+    <FlexboxLayout class="lgnlayout" [class.slideInLeft]='swipeDirection == 1' flexDirection="column" *ngIf="slide == 0" (swipe)="onSwipe($event,0)" id="slide1">
+
+        <FlexboxLayout class="pageTitle">
+          <Label text="Help us get to know better."  ></Label>
+        </FlexboxLayout>
+        
+        <FlexboxLayout class="list" >
+           <FlexboxLayout class="item" alignItems="center" >
+              <StackLayout>
+                <Label text="What is your primary sport?" (tap)="onTap()" class="smallLabel"></Label>
+                <ListPicker [items]="sportList"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,'1')" class="p-15" width="200" height="100"></ListPicker>
+              </StackLayout>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="item" >
+              <StackLayout>
+                  <Label text="Highest level of education" class="smallLabel" ></Label>
+                  <ListPicker [items]="educationList"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,'2')" class="p-15" width="200" height="100"></ListPicker>
+                </StackLayout>
+          </FlexboxLayout> 
+          
+        </FlexboxLayout>
+        <DockLayout stretchLastChild="true">
+               
+                <Label  dock="right" text="Skip for now" class="skip-label" (tap)="close()"></Label>
+                <FlexboxLayout class="dots">
+                        <Label *ngFor="let i of [0,1,2]" [class.active]="i == 0"></Label>
+                    </FlexboxLayout>
+              </DockLayout>
+    </FlexboxLayout>
+    <FlexboxLayout class="lgnlayout slideInRight"  [class.slideInLeft]='swipeDirection == 1' flexDirection="column" *ngIf="slide == 1" (swipe)="onSwipe($event,1)" loaded="slide2" id="slide2">
+
+        <FlexboxLayout class="pageTitle" (tap)="onTap()">
+          <Label text="Help us get to know better."></Label>
+        </FlexboxLayout>
+
+        <FlexboxLayout class="list">
+          <FlexboxLayout class="item">
+              <StackLayout>
+                  <Label text="When were you born?" (swipe)="onSwipe($event)"></Label>
+                  <ListPicker [items]="yearList"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,3)" class="p-15" width="200" height="100"></ListPicker>
+                </StackLayout>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="item">
+              <StackLayout>
+                  <Label text="What is your gender?" (tap)="onTap()" ></Label>
+                  <ListPicker [items]="genderList"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,4)" class="p-15" width="200" height="100"></ListPicker>
+                </StackLayout>
+          </FlexboxLayout>
+        </FlexboxLayout>
+        <DockLayout stretchLastChild="true">
+               
+                <Label  dock="right" text="Skip for now" class="skip-label" (tap)="close()"></Label>
+                <FlexboxLayout class="dots">
+                        <Label *ngFor="let i of [0,1,2]" [class.active]="i == 1"></Label>
+                    </FlexboxLayout>
+              </DockLayout>
+    </FlexboxLayout>
+    <FlexboxLayout class="lgnlayout slideInRight" [class.slideInLeft]='swipeDirection == 1' flexDirection="column" *ngIf="slide == 2" (swipe)="onSwipe($event,2)" id="slide3">
+
+        <FlexboxLayout class="pageTitle">
+          <Label text="Help us get to know better."></Label>
+        </FlexboxLayout>
+
+        <FlexboxLayout class="list">
+          <FlexboxLayout class="item">
+              <StackLayout>
+                  <Label text="Country" (tap)="onTap()" ></Label>
+                  <ListPicker [items]="countryList"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,5)" class="p-15" width="200" height="100"></ListPicker>
+                </StackLayout>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="item">
+              <StackLayout>
+                  <Label text="State" (tap)="onTap()" ></Label>
+                  <ListPicker [items]="stateList"  selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event,6)" class="p-15" width="200" height="100"></ListPicker>
+                </StackLayout>
+          </FlexboxLayout>
+        </FlexboxLayout>
+        <DockLayout stretchLastChild="true">
+               
+                <Label  dock="right" text="Done" class="skip-label" (tap)="storeUserInfo()"></Label>
+                <FlexboxLayout class="dots">
+                        <Label *ngFor="let i of [0,1,2]" [class.active]="i == 2"></Label>
+                    </FlexboxLayout>
+              </DockLayout>        
+    </FlexboxLayout>
+    
+   </StackLayout></Page>

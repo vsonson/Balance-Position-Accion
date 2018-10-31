@@ -1,0 +1,47 @@
+._app-loader
+	height: 100%
+	width: 100%
+	z-index: 999
+	&>.back-drop
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 3
+		background-color: #000
+		opacity: 0.5
+	&>._content
+		z-index: 4
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		align-items: center
+		justify-content: center
+		&>._content-inner
+			background-color: #fff
+			display: flex
+			flex-direction: column
+			min-width: 200px
+			min-height: 110px
+			align-items: center
+			padding: 21px
+			justify-content: center
+			border-radius: 5px
+			&>Image
+				width: 56px
+				height: 56px
+				animation-name: rotate
+				animation-duration: 1s
+				animation-iteration-count: infinite
+				animation-fill-mode: forwards
+				animation-timing-function: linear
+			&>Label
+				margin-top: 11px
+				font-weight: bold
+
+@keyframes rotate
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360)

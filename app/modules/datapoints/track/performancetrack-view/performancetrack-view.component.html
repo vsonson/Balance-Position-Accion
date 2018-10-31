@@ -1,0 +1,33 @@
+
+<StackLayout orientation="vertical" class="layout">
+
+  <StackLayout orientation="horizontal" verticalAlignment="top">
+    <Image src="res://back"  width="30" height="30" stretch="aspectFill" verticalAlignment="center" (tap)="goBack()"></Image>
+    <Label text="SomeDate" class="headingLabel" verticalAlignment="center"></Label>
+    <Image src="res://performance_grey" width="30" height="30"></Image>
+  </StackLayout>
+  
+  <Label text="Performance" class="headingLabel mar20"></Label>
+
+  <!-- <Label text="Overall - school, sport, life -how'd you do today?" class="messagelabel" horizontalAlignment="center" verticalAlignment="center"></Label> -->
+
+  <FlexboxLayout class="height30">
+    <StackLayout horizontalAlignment="center">
+        <Label text="Overall - school, sport, life -how'd you do today?" textWrap="true" class="questionLabel"></Label>
+        <ListPicker [items]="performanceList"  selectedIndex="0" width="200" height="100" horizontalAlignment="center"></ListPicker>
+      </StackLayout>
+  </FlexboxLayout> 
+
+<StackLayout  orientation="horizontal" horizontalAlignment="center" class="stackWidth">
+  <StackLayout (tap)="openNote()">
+    <Image src="res://notebook_blue"  width="30" height="30" stretch="aspectFill" horizontalAlignment="center"></Image>
+    <Label text="Make A Note" class="trackLabel" horizontalAlignment="center"></Label> 
+  </StackLayout>
+  <StackLayout (tap)="done()" class="marleft5"> 
+    <Image src="res://check_blue"  width="30" height="30" stretch="aspectFill" horizontalAlignment="center"></Image>
+    <Label text="Done" class="trackLabel" horizontalAlignment="center"></Label>
+  </StackLayout>
+</StackLayout>
+
+
+</StackLayout>

@@ -1,0 +1,207 @@
+<ScrollView>
+   <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+          <StackLayout class="pb-content smallLabel" visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="Stress is high right now, but don’t worry.Things will get better. We’ve just got to work on better stress management. You’ve got this!" textWrap="true"></Label>
+              <Label text=""></Label>
+                <Label textWrap="true">
+                <FormattedString>
+                  <Span text="It’s time to reach out to a professional in your network or otherwise who can get you the support that you need to manage your stress - a psychologist, team doctor, athletic trainer, coach, etc. Talk about how you've been feeling and the stressors in your life.  Be honest, so you can come up with the best action plan to take control of your stress." ></Span>
+                </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString >
+                  <Span text="Commit to the " ></Span>
+                  <Span text="Balance Fundamentals Program." class="underline" ></Span>
+                  <Span text="Your ability to manage your thoughts and emotions will increase, giving you more control of how you’re feeling. "></Span>
+                  </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" >
+                  <FormattedString>
+                    <Span text="Plan to do an activity for yourself each day. Invest in your peace of mind. You deserve it." ></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="" ></Label>    
+              <Label text="Activity Examples:"></Label>
+              <Label text="i.   Unplug from technology for one hour each day. " textWrap="true"></Label>
+              <Label text="ii.  Clean/ organize your room." textWrap="true"></Label>
+              <Label text="iii. Visit a new restaurant you’ve been meaning to try. " textWrap="true"></Label>
+              <Label text="iv.  Listen to music, go for a walk, or watch your favorite movie. " textWrap="true"></Label>
+        
+              <Label textWrap="true" (tap)="gotoResources()">
+              <FormattedString>
+                  <Span text="*Remember, text and call options in the " ></Span>
+                  <Span text="Resources " class="underline" ></Span>
+                  <Span text="page are always available in the event of emergency." ></Span>
+              </FormattedString>
+            </Label>
+            </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel" visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Wow, you’re doing a great job managing stress! Awesome work. Life has a way of throwing curveballs, so let’s be as prepared as possible. " textWrap="true"></Label>
+                <Label text=""></Label>
+                  <Label textWrap="true" >
+                                      <FormattedString>
+                    <Span text="Keep your stress at bay by planning some " ></Span>
+                    <Span text=" leisure activities "></Span>
+                    <Span text="  into your week. Even better, make it a goal to do one of the activities on your toughest/busiest day of the week. " ></Span>
+                  </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+                <Label text="Leisure activities to try: "></Label>
+                <Label text="i.   Create and listen to a new, calming playlist." textWrap="true"></Label>
+                <Label text="ii.  Spend time with a dog or other pet - really, it works!" textWrap="true"></Label>
+                <Label text="iii. Make yourself a nice dinner… or just buy one" textWrap="true"></Label>
+                <Label text="iv.  Go for a scenic walk with a friend. " textWrap="true"></Label>
+                <Label text="v.   Visit a museum." textWrap="true"></Label>
+          
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString >
+                    <Span text="Make an effort to spend time with animals and people. Furry friends help de-stress. Reach out to someone in your " ></Span>
+                    <Span text=" Network " class="underline" ></Span>
+                    <Span text=" and plan to get brunch or dinner. "></Span>
+                    </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Cultivate the ability to manage your thoughts and emotions better by listening to the" ></Span>
+                      <Span text=" Box Breathing " class="underline" ></Span>
+                      <Span text=" single."></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+              </StackLayout>
+              </StackLayout>
+
+              <StackLayout class="pb-content smallLabel" visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Looks like you’re a little stressed out. No worries, that’s normal; let’s get a plan together to see how we can manage it better. " textWrap="true"></Label>
+                  <Label text=""></Label>
+                    <Label textWrap="true" (tap)="gotoNotebook()">
+                    <FormattedString>
+                      <Span text="Prioritize. Take a look at your schedule and your “to do list,” and make a list in your " ></Span>
+                      <Span text="Notebook" class="underline" ></Span>
+                      <Span text=" of what absolutely needs to get done today and what can wait. Practice this daily to manage your obligations. "></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                      <FormattedString >
+                      <Span text="Listen to the " ></Span>
+                      <Span text="Balance Fundamental Program" class="underline" ></Span>
+                      <Span text="  to become more mindful of your time and energy. "></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNetwork()">
+                      <FormattedString>
+                        <Span text="Reach out to someone in your " ></Span>
+                        <Span text="Network" class="underline" ></Span>
+                      <Span text=" and share what’s stressing you with them - even vent if you have too! After, talk about something that is going well for you both. Maybe plan to do something fun together in the next couple of days. "></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>    
+                </StackLayout>
+                </StackLayout>
+                <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+      
+                </StackLayout>
+              </StackLayout>
+
+      </FlexboxLayout> 
+  </StackLayout>
+
+  <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                 
+                  <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/Science/Impact')">
+                    <FormattedString>
+                      <Span text="Reach out to them (message icon)  and let them know you’ve noticed how well they seem to be handling their workload. Ask them what’s been working for them to reinforce a "></Span>
+                      <Span text="growth mindset" class="underline"></Span>
+                      <Span text=" so they continue to take positive action."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="Plan a fun night out together or a lazy Sunday watching movies. Connection and fun will help keep stress managed. Even better if you ditch the phones!"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/Science/Impact')">
+                    <FormattedString>
+                      <Span text="Lead with empathy, and be on the lookout for "></Span>
+                      <Span text="possible obstacles" class="underline"></Span>
+                      <Span text=" that may get in the way of them seeking out help. Continue to build your relationship to mitigate the barriers. "></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Send them a  message (message icon) checking in on how they’re doing. Listen to what they’re saying, validate their feelings, and directly ask them how you can help them. "></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Point them towards the "></Span>
+                      <Span text="Mindfulness for Stress" class="underline"></Span>
+                      <Span text=" program. Increased practice will help them be more able to better manage their thoughts and emotions."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Pressure and workload can trigger stress. Encourage that they take some time to unplug and invest in other areas of their life or "></Span>
+                      <Span text="hobbies" class="underline"></Span>
+                      <Span text=" that would fulfill them. Finding fulfillment in other areas can help recharge and refocus an athlete."></Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label tex="a. Other areas & hobbies:"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Volunteering"></Label>
+                      <Label textWrap="true" text="ii.  Music, arts & theatre"></Label>
+                      <Label textWrap="true" text="iii. A club or group outside of athletics"></Label>
+                      <Label textWrap="true" text="iv.  Cooking"></Label>
+                    </StackLayout>
+                  </StackLayout>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Call them! (phone icon) Ask how they’re doing and how you can best support them through all the stress in their life. Let them know you’re available to listen and that you care for them. See if there is anything you can do to help ease their workload or help them set priorities. "></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="Guide them towards the appropriate healthcare professionals in their "> </Span>
+                      <Span text="Network" class="underline"></Span>
+                      <Span text=" - athletic trainers, sports psychologists, personal doctors, etc. If they don’t have any in their network, discuss resources that are available to them through the school or other means."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label text="Follow protocol." class="underline" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')"></Label>
+                  <Label text=""></Label>
+                  <Label text="Help lessen the burden of their pressure and demands. Sit down with them and talk through everything that’s on their plate. Work through the list to prioritize the most important items and to put non-important items on the backburner until their balance recovers."></Label>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+
+
+-->
+
+</ScrollView>

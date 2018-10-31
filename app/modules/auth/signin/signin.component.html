@@ -1,0 +1,50 @@
+<ScrollView>
+  <StackLayout orientation="vertical">
+    <StackLayout orientation="vertical" style="margin-top:20;">
+      <Image src="res://balance_position_logo" width="150" height="100" stretch="aspectFill"></Image>
+    </StackLayout>
+
+    <StackLayout class="form">
+      <StackLayout class=" inputStackLayout" orientation="horizontal">
+        <Image src="res://person_grey" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Email" keyboardType="email" #email="ngModel" [(ngModel)]="user.username"
+          autocorrect="false" autocapitalizationType="none" required email></TextField>
+      </StackLayout>
+
+      <StackLayout *ngIf="email.errors && (email.dirty || email.touched)">
+        <Label class="signinupLable" *ngIf="email.errors.required" [text]="errorMessage.emailRequired"></Label>
+        <Label class="signinupLable" *ngIf="!email.errors.required && email.errors.email" [text]="errorMessage.emailInvalid"></Label>
+      </StackLayout>
+
+      <StackLayout class="inputStackLayout" orientation="horizontal">
+        <Image src="res://password_key" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Password" secure="true" name="password" [(ngModel)]="user.password" #password="ngModel"
+          required></TextField>
+      </StackLayout>
+
+      <StackLayout *ngIf="password.errors && (password.dirty || password.touched)">
+        <Label *ngIf="password.errors.required" [text]="errorMessage.passwordRequired" class="signinupLable"></Label>
+      </StackLayout>
+
+       <StackLayout [visibility]="invalidError ? 'visible' : 'collapse'">
+        <Label text="Invalid email or password!" class="signinupLable"></Label>
+      </StackLayout>
+
+      <Button class="btnSignIn" text="Sign In" class="btnSignIn" style="margin-top:20;" (tap)="login()" [visibility]="!isLoading ? 'visible' : 'collapse'"></Button>
+      <ActivityIndicator row="1" style="margin-top:20;" #activityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'"  width="70" height="70" class="activity-indicator"></ActivityIndicator>
+    </StackLayout>
+
+
+    <FlexboxLayout class="mar_top" justifyContent="center">
+
+      <Label class="lbl fontten" text="Forgot your "></Label>
+      <Label class="blue_link" text="password?" [nsRouterLink]="['/auth/forgetpassword']"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout class="mar_top" justifyContent="center">
+      <Label class="lbl fontten" text="Don't have an account?" [nsRouterLink]="['/myplaybook/mood']"></Label>
+      <Label class="blue_link" text="Sign Up" [nsRouterLink]="['/auth/signup']"></Label>
+    </FlexboxLayout>
+
+  </StackLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+<StackLayout orientation="vertical">
+        <GridLayout class="quoteGrid">
+                <StackLayout verticalAlignment="center">
+                        <Label textWrap="true" width="100%">
+                                <FormattedString>
+                                        <Span [text]="quoteSymbol" fontSize="42px" color="#888b8d"></Span>
+                                        <!-- <Span [text]="currentQuote.quoteText" class="quote"></Span> -->
+                                    </FormattedString>
+                        </Label>
+                        <Label textWrap="true" width="90%" [text]="currentQuote.quoteText" class="quote"></Label>
+                        <Label [text]="currentQuote.author" textWrap="true" horizontalAlignment="right" class="author" ></Label>
+                </StackLayout>
+
+                <Image src="res://blue_right_arrow" width="30" height="30" verticalAlignment="bottom" horizontalAlignment="right"
+                        (tap)="next()" class="nextButton"></Image>
+
+        </GridLayout>
+</StackLayout>

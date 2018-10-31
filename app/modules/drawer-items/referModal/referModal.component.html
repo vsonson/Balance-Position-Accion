@@ -1,0 +1,20 @@
+<Page loaded="loaded" height="37%" width="90%">
+   <StackLayout class="modal-view-style modal"  verticalAlignment="top" >
+   <FlexboxLayout justifyContent="space-between">
+	<Image src="" width="20" height="30" ></Image>
+	<Image src="" width="20" height="30" ></Image>
+	<Image src="res://x_grey" style="margin-right: 15;" width="50" height="50" class="mar5" (tap)="close()" ></Image>
+	</FlexboxLayout>
+
+	<FlexboxLayout flexDirection="column">
+	
+  <label text="Your referral was sent to freind's email. Once they sign up, you will be 10 points closer to earning a free month of premium!" textWrap="true" class="bold_text_refer" ></label>
+  
+	</FlexboxLayout>
+
+	<FlexboxLayout justifyContent="center">
+  <Button text="Thanks!" class="btnRefer" (tap)="close()"></Button>
+  </FlexboxLayout>
+
+   </StackLayout>
+   </Page>

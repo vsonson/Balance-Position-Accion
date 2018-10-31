@@ -1,0 +1,104 @@
+<ScrollView>
+
+    <!-- user content -->
+  
+    <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}" >
+          <FlexboxLayout class="item"  >
+              <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                      <Label textWrap="true">
+                          <FormattedString>
+                              <Span text="The engine looks like it’s running well! As athletes, it can be hard to find time to prepare for meals, so keep putting in the work to fuel yourself properly.The engine looks like it’s running well! As athletes, it can be hard to find time to prepare for meals, so keep putting in the work to fuel yourself properly. "></Span>
+                              </FormattedString>
+                            </Label>
+                            <Label text=""></Label>
+                    <Label textWrap="true" (tap)="goToFoundationProgram()">
+                      <FormattedString>
+                        <Span text="Part of appetite is self-awareness. Increase your self-awareness by listening to the "></Span>
+                        <Span text="Balance Fundamentals Program " class="underline"></Span>
+                        <Span text=" in our program library."></Span>
+                      </FormattedString>
+                    </Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Fueling%20For%20Recovery.pdf')">
+                      <FormattedString>
+                        <Span text="Your appetite will let you know when your body needs fuel, but as an athlete, it’s still important to"></Span>
+                        <Span text="add meals that aid in your body’s recovery." class="underline"></Span>
+                        <Span text="Talk with your strength and conditioning coach, nutritionist, or athletic trainer about how well you’re fueling for recovery. "></Span>
+                      </FormattedString>
+                    </Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Eating%20on%20the%20Road%20Fact%20Sheet.pdf')">
+                      <FormattedString>
+                          <Span text="Plan ahead. As your schedule and demands increase, your hours away from your house or "></Span>
+                          <Span text="on the road " class="underline"></Span>
+                          <Span text=" stretch your time to meal plan. Keep healthy snacks in your backpack, car, and locker room for when you’re running short on time but need calories."></Span>
+                      </FormattedString>
+                    </Label>
+                </StackLayout>
+              </StackLayout>
+  
+              <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" text="Changes in appetite can be caused by a few different things. Let’s get a plan in action to get back to a healthy appetite."></Label>
+                <Label text=""></Label>
+                    <Label textWrap="true" (tap)="goToMindfulness()">
+                      <FormattedString>
+                        <Span text="Stress and the pace of our day can contribute to changes in appetite. Help keep stress at bay by listening to the "></Span>
+                        <Span text=" Stress Guided Meditation." class="underline"></Span>
+                        
+                      </FormattedString>
+                    </Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Eating%20Frequency%20Fact%20Sheet_0.pdf')">
+                      <FormattedString>
+                        <Span text="Stick to " ></Span>
+                        <Span text="an eating routine." class="underline"></Span>
+                        <Span text=" Student-athletes are used to a schedule, so implement that strategy into your eating habits. Your body will fall in line with the schedule and regulate itself more easily with a schedule." ></Span>
+                      </FormattedString>
+                    </Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" text="Fuel yourself with real food. Real food will both fuel you and satiate you. Heavily processed foods will do neither."></Label>
+                    <Label textWrap="true" text="Real Food and Satiation " (tap)="goToUrl('http://www.sportsrd.org/wp-content/uploads/2015/07/Healthy-Grocery-Shopping.pdf')"class="underline"></Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" text="The more nutrient dense the food you’re eating, the better your brain and stomach will communicate when you’re full. If you’re eating processed, less nutrient rich foods, your body will still need the nutrients and the calories will pile up because it will take longer to satiate you."></Label>
+                </StackLayout>
+              </StackLayout>
+  
+              <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="As athletes, it’s critical that our appetite is balanced, so that we’re fueling ourselves properly. The better fueled we are, the better our bodies will be able to perform at the level we want. Let’s get to work on it now." textWrap="true"></Label>
+                <Label text=""></Label>
+                    <Label text="It’s essential to speak with a healthcare professional that has worked with athletes before on nutrition and appetite matters, like a sports nutritionist, team doctor, or athletic trainer. Discuss your changes in appetite and work together to come up with a plan to get your appetite back to a healthy level." textWrap="true"></Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" (tap)="goToMindfulness()">
+                      <FormattedString>
+                        <Span text="Things like stress, anxiety, and lack of sleep can be the culprits for both increased appetite or decreased appetite. Manage these symptoms by listening to the " ></Span>
+                        <Span text="Stress Guided Meditation " class="underline"></Span>
+                        <Span text=" in the mindfulness library." ></Span>
+                      </FormattedString>
+                    </Label>
+                    <Label text=""></Label>
+                    <Label textWrap="true" text="If you’re experiencing anxiety about eating, food, or weight, reach out (message icon) to someone in your network or a counselor, social worker, or psychologist who can help you get back on track. You’ve got this."></Label>
+                    <Label textWrap="true" (tap)="gotoResources()">
+                    <FormattedString>
+                        <Span text="*Remember, text and call options in the "></Span>
+                        <Span text=" Resources " class="underline"></Span>
+                        <Span text=" page are always available in the event of emergency."></Span>
+                    </FormattedString>
+                  </Label>
+                </StackLayout>
+              </StackLayout>
+
+              <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+    
+              </StackLayout>
+            </StackLayout>
+
+
+
+          </FlexboxLayout> 
+      </StackLayout>
+</ScrollView>

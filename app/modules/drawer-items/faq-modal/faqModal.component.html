@@ -1,0 +1,27 @@
+<ScrollView>
+    <StackLayout class="modal-view-style modal" verticalAlignment="top">
+        <FlexboxLayout justifyContent="space-between">
+            <Image src="" width="20" height="30"></Image>
+            <label text="FAQ's" class="head"></label>
+            <Image src="res://x_grey" width="40" height="40" class="mar5" (tap)="close()"></Image>
+        </FlexboxLayout>
+    
+        <FlexboxLayout flexDirection="column" class="questionblock">
+            <label text="How do I upgrade to Premium?" class="faq" textWrap="true" (tap)="openFAQ1()"></label>
+            <label text="What causes the color of my data points to change?" textWrap="true" class="faq" (tap)="openFAQ2()"></label>
+            <label text="How do I send someone a request to join myNetwork?" textWrap="true" class="faq" (tap)="openFAQ3()"></label>
+            <label text="How do I change the reminder time to track my data or practice mindfulness?" textWrap="true" class="faq" (tap)="openFAQ4()"></label>
+            <label text="How do I export my data to someone in myNetwork?" textWrap="true" class="faq" (tap)="openFAQ5()"></label>
+            <label text="What dictates what’s in my playbook?" textWrap="true" class="faq" (tap)="openFAQ6()"></label>
+            <label text="How can I earn a free month of premium?" textWrap="true" class="faq" (tap)="openFAQ7()"></label>
+            <label text="How do I change the share settings for someone in myNetwork?" textWrap="true" class="faq" (tap)="openFAQ8()"></label>
+            <label text="How do I deactivate my account?" textWrap="true" class="faq" (tap)="openFAQ9()"></label>
+            <label class="spacer20"></label>
+            <label text="Couldn't find your question?" textWrap="true" class="faq_tb"></label>
+            <label text="Drop us a line via email:" textWrap="true" class="faq_tb"></label>
+            <label class="spacer20"></label>
+            <label text="info@balanceposition.com" textWrap="true" class="faq_tb"></label>
+        </FlexboxLayout>
+        
+    </StackLayout>  
+</ScrollView>

@@ -1,0 +1,59 @@
+
+<StackLayout orientation="vertical" class="dt-layout">
+
+  <FlexboxLayout orientation="horizontal" verticalAlignment="top" class="hdr__">
+    <Image src="res://back" width="30" height="30" style="margin-left: 10;" stretch="aspectFill" verticalAlignment="center" (tap)="goBack()" class="_bkicn"></Image>
+    <Label text="My Mood" class="headingLabel" verticalAlignment="center"></Label>
+    <FlexboxLayout style="margin-right:10;" verticalAlignment="center">
+      <Image src="res://mood_grey" width="55" height="50" ></Image>
+    </FlexboxLayout>
+  </FlexboxLayout>
+
+  <StackLayout orientation="vertical" class="content__">
+    <!-- <ScrollView class="con__" orientation="vertical" height="100%"> -->
+
+      <StackLayout class="_space"></StackLayout>
+
+      <Stacklayout class="_lbls">
+        <Label text="My Mood" class="_sub"></Label>
+      </Stacklayout>
+
+      <StackLayout height="500px" width="100%" >
+          <RadCartesianChart  tkExampleTitle tkToggleNavButton class="chart" verticalAlignment="center">
+          <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+          <LinearAxis tkCartesianVerticalAxis labelTextColor="#fff"></LinearAxis>
+          <SplineSeries seriesName="Spline" tkCartesianSeries [items]="graphData" categoryProperty="Day" valueProperty="MoodLevel"></SplineSeries>
+          <Palette tkCartesianPalette seriesName="Spline">
+            <PaletteEntry tkCartesianPaletteEntry strokeColor="#005f86" strokeWidth="1"></PaletteEntry>
+          </Palette>
+        </RadCartesianChart>
+      </StackLayout>
+
+      <StackLayout orientation="vertical" verticalAlignment="bottom"  class="_info">
+          <StackLayout orientation="vertical">
+          <Label text="Why do we monitor mood frequently?" horizontalAlignment="center"></Label>
+          <Image src="res://info_blue" width="20" height="20" horizontalAlignment="center" stretch="aspectFill" (tap)="openInfo()"></Image>
+          </StackLayout>
+      </StackLayout>
+
+      <FlexboxLayout orientation="horizontal" class="_actns" height="25%" >
+         <StackLayout class="_itms" (tap)="trackMood()"> 
+            <Image src="res://track_blue"  stretch="aspectFill" horizontalAlignment="center"></Image>
+            <Label text="Track Mood" class="trackLabel" horizontalAlignment="center"></Label>
+        </StackLayout>
+        <!--(tap)="trackMood()" -->
+        <StackLayout class="_itms" (tap)="moodPlaybook()"> 
+            <Image src="res://playbook_blue" stretch="aspectFill" horizontalAlignment="center"></Image>
+            <Label text="Playbook" class="trackLabel" horizontalAlignment="center"></Label>
+        </StackLayout>
+        <StackLayout class="_itms" (tap)="openNote()">
+            <Image src="res://notebook_blue"  stretch="aspectFill" horizontalAlignment="center"></Image>
+            <Label text="Make A Note" class="trackLabel" horizontalAlignment="center"></Label>
+        </StackLayout>
+      </FlexboxLayout>
+
+      
+    <!-- </ScrollView> -->
+  </StackLayout>
+
+</StackLayout>

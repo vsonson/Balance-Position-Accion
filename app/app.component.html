@@ -1,0 +1,10 @@
+<AbsoluteLayout class="_app-layout">
+<!-- <alert class="_alert"></alert> -->
+<StackLayout class='content_' >
+	<page-router-outlet ></page-router-outlet>
+</StackLayout>
+<StackLayout class="app-loader" [visibility]="loaderScope.open ? 'visible': 'collapse'">
+	<app-loader></app-loader>
+</StackLayout>	
+</AbsoluteLayout>
+

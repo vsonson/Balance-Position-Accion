@@ -1,0 +1,36 @@
+<ScrollView>
+    <StackLayout style="background-color: #FFF">
+   <FlexboxLayout justifyContent="space-between">
+        <Image src="res://back" width="30" height="30" style="margin-left: 20; margin-top: 17" [nsRouterLink]="['/home/dashboard']"></Image>
+      <label text="Practice : Mindfulness" style="font-size: 30; color: #005f86; margin-top: 10;"></label>
+      <Image src="" width="20" height="25"></Image>
+   </FlexboxLayout>
+
+   <SegmentedBar  class="segmented-bar" selectedIndex="0" (selectedIndexChange)="onSelectedIndexChange($event)">
+      <SegmentedBarItem title="Programs" (tap)="programs()"></SegmentedBarItem>
+      <SegmentedBarItem title="Singles" (tap)="singles()" ></SegmentedBarItem>
+   </SegmentedBar>
+   
+   
+   <FlexboxLayout class="line"></FlexboxLayout>
+   <StackLayout *ngIf="prog" width="100%">
+      <FlexboxLayout>
+         <FlexboxLayout width="13%">
+            <Image src="res://headset_grey" width="30" height="30" style="margin-left: 5;margin-bottom: 5;margin-top: 5;" [nsRouterLink]="['/home/foundation']" ></Image>
+         </FlexboxLayout>
+         
+         <FlexboxLayout width="87%" justifyContent="space-between">
+            <label text="Foundation Program" textWrap="true"  style="font-size: 20;color: #888b8d;margin-top: 5;margin-bottom: 5;" [nsRouterLink]="['/home/foundation']"></label>
+         </FlexboxLayout>
+      </FlexboxLayout>
+   </StackLayout> 
+   <StackLayout *ngIf="sing" width="100%">
+      <StackLayout *ngFor="let item of audioProgramObj.episodes; let i = index " (tap)="goToAudioPage(item)">
+          <FlexboxLayout style="margin-top:15;">
+             <label text="{{i+1}}" style="font-size: 20;color: #888b8d;margin-left:20;text-align: center;" [nsRouterLink]="['/home/video']"></label>
+             <label text="Single" textWrap="true"  style="font-size: 20;color: #888b8d;margin-left: 20;"></label>
+          </FlexboxLayout>
+      </StackLayout>
+   </StackLayout>
+</StackLayout>
+</ScrollView>

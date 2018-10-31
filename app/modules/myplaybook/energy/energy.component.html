@@ -1,0 +1,189 @@
+<ScrollView>
+
+  <!-- user content -->
+
+   <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+          <StackLayout class="pb-content smallLabel" visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="When our energy is inconsistent, our cognition, performance, and mental health are affected. Take the steps necessary to find a more optimal energy state. " textWrap="true"></Label>
+              <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                <FormattedString>
+                  <Span text="Stress, anxiety, and mood all play in a role in how energized we feel. When our stress and anxiety levels increase, the amount of energy used also increases. Manage this hyperarousal with the " ></Span>
+                  <Span text="Progressive Relaxation" class="underline" ></Span>
+                  <Span text="single in the library."></Span>
+                </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Fueling%20For%20Recovery.pdf')">
+                  <FormattedString >
+                  <Span text="The strain on an athlete’s body is immense, so it is critical to take the " ></Span>
+                  <Span text="proper steps to recovery properly. " class="underline" ></Span>
+                  <Span text="Fuel your body with the intent to recover optimally. "></Span>
+                  </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString>
+                    <Span text="Constantly being on the move is draining. Overtraining, a demanding workload, and pressure impact how energized we feel. Offset the high demands with some" ></Span>
+                    <Span text=" down time and self-care. " class="underline" ></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="" ></Label>    
+              <Label text="Ways to relax:"></Label>
+              <Label text="i.   Unplug from technology for one hour each day. " textWrap="true"></Label>
+              <Label text="ii.  Spend some time outdoors. Go for a mindful walk outside." textWrap="true"></Label>
+              <Label text="iii. Hang out with close, positive friends. Find something fun to do." textWrap="true"></Label>
+              <Label text="iv.  Read for pleasure, get a massage, or listen to a calming playlist.  " textWrap="true"></Label>
+        </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel" visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="The work you’re putting in is showing in your energy! Continue to do the little things that are allowing you to thrive. " textWrap="true"></Label>
+                <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString>
+                    <Span text="One of the most critical pieces in managing and optimizing our energy is self-awareness. The better we’re able to listen to and understand what our body needs, the more able we will be to take care of ourselves properly. Build awareness with the " ></Span>
+                    <Span text="Balance Fundamental Program." class="underline" ></Span>
+                  </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Energy%20Availability%20Fact%20Sheet%20WEB.pdf')">
+                    <FormattedString >
+                    <Span text="Continue to " ></Span>
+                    <Span text="fuel yourself properly" class="underline" ></Span>
+                    <Span text=" with a nutrition plan that matches your activity levels, recovery needs, and performance goals. Work with your strength and conditioning coach, nutritionist, and athletic trainer to help a get a plan in place."></Span>
+                    </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" >
+                    <FormattedString>
+                      <Span text="Without an adequate amount of sleep, our bodies cannot recharge properly. Try to maintain a regular sleep schedule. Plan your day with sleep as a priority. " ></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+              </StackLayout>
+
+</StackLayout>
+
+              <StackLayout class="pb-content smallLabel" visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Low levels of energy can put us at risk mentally and physically and can be an indication of more serious underlying issues. Let’s work together to find a way to become more balanced. It’s time to go to work. " textWrap="true"></Label>
+                  <Label text=""></Label>
+                    <Label textWrap="true">
+                    <FormattedString>
+                      <Span text="Deficient levels of energy can be caused by an assortment of physical and mental causes. It’s time to speak with a professional like a doctor or psychologist to find and manage the underlying issue. Keep all relevant parties involved as you go through this process so they can best support you. " ></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                      <FormattedString >
+                      <Span text="Reach out to someone in your " ></Span>
+                      <Span text="Network" class="underline" ></Span>
+                      <Span text=" and talk with them about what’s been going on. Talk through how you’ve been feeling to take some pressure off of you. When we’re feeling down, isolation can seem appealing, but it’s critical to connect with the people in our lives. "></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()" >
+                      <FormattedString>
+                        <Span text="When energy is low, it’s easy to lose motivation to keep moving forward in the other areas of our lives. Use your " ></Span>
+                        <Span text="Notebook" class="underline" ></Span>
+                        <Span text=" to prioritize the areas of your life where your energy is most valuable and needed. The most important areas should be where you spend your energy and time. Put non-critical items on the backburner until you’re feeling better. " ></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>    
+                  <Label textWrap="true" (tap)="gotoResources()">
+                    <FormattedString>
+                      <Span text="*Remember, text and call options in the " ></Span>
+                      <Span text=" Resources " class="underline" ></Span>
+                      <Span text=" page are always available in the event of emergency." ></Span>
+                    </FormattedString>
+                </Label>
+                </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+      
+
+                </StackLayout>
+              </StackLayout>
+              
+      </FlexboxLayout> 
+  </StackLayout>
+
+  <!-- network content 
+
+  <StackLayout class="playbook-router-layout" visibility="{{type == 'network' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+          
+          <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+            <Label text="How you can help {{user.name}}: " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/parents/growth-mindset-parenting')">
+                  <FormattedString>
+                    <Span text="One of the best ways you can support an athlete who is doing well is to acknowledge and encourage the steps they’ve taken to achieve their balanced state. Be mindful to use language that cultivates a "></Span>
+                    <Span text="growth mindset." class="underline"></Span>
+                    <Span text=" Praise the work they’ve put in to find balance."></Span>
+                  </FormattedString>
+                </Label>
+                <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/mind-body-and-sport-potential-barriers-accessing-mental-health-services')">
+                  <FormattedString>
+                    <Span text="Cultivate a care-seeking environment. There a number of "></Span>
+                    <Span text="reasons" class="underline"></Span>
+                    <Span text=" why an athlete may not seek out help when they’re struggling. Maintain an open line of communication, a “got your back” mentality, and a judgement free zone."></Span>
+                  </FormattedString>
+                </Label>
+                <Label textWrap="true" text="Keep an eye on the athlete’s schedule, demands, and how they seem to be handling everything. Check in with them (message icon) periodically. Understand that when their bodies and minds undergo increased strain, their energy levels are depleted faster. "></Label>
+            </StackLayout>
+          </StackLayout>
+
+
+          <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+            <Label text="How you can help {{user.name}}: " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Fueling%20For%20Recovery.pdf')">
+                  <FormattedString>
+                    <Span text="Promote proactive nutrition habits. Athletes have different nutritional requirements due to their immense physical demands. Help educate the athlete on "></Span>
+                    <Span text="how to best fuel themselves" class="underline"></Span>
+                    <Span text=" for performance and recovery. "></Span>
+                  </FormattedString>
+                </Label>
+                <Label textWrap="true" text="Talk with the athlete about what could be depleting their energy. Do they need to talk with a professional? Do they need help with time management? Does their grocery list reflect their nutritional needs? Ask how you can best support them."></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString>
+                    <Span text="Stress, anxiety, and pressure play a huge role in energy levels. Encourage the athlete to manage their stress by listening to the "></Span>
+                    <Span text="Mindfulness for Stress" class="underline"></Span>
+                    <Span text=" program in the library."></Span>
+                  </FormattedString>
+                </Label>
+                
+            </StackLayout>
+          </StackLayout>
+
+           <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+            <Label text="How you can help {{user.name}}: " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/mind-body-and-sport-interassociation-recommendations')">
+                  <FormattedString>
+                    <Span text="It’s time to encourage the athlete to talk with a professional to get back on track. Concerning energy levels can impact an athlete’s mental and physical health as well as all around performance. "></Span>
+                    <Span text="Know your role in the process" class="underline"></Span>
+                    <Span text=", and take the necessary steps to get adequate help for the athlete. "></Span>
+                  </FormattedString>
+                </Label>
+                <Label textWrap="true" text="When listening to how the athlete is feeling, be mindful of your reaction. Your reaction is critical. Lead with compassion, empathy, and encouragement. Remind them that what they’re going through is temporary and that they can achieve a more balanced state."></Label>
+                <Label textWrap="true" text="Obligations can fall through the cracks when energy is low. Help the athlete stay afloat in other areas of their life by helping to prioritize the most important areas, creating a plan to execute requirements, and putting non-critical areas on the backburner."></Label>
+                
+            </StackLayout>
+          </StackLayout>
+
+
+
+      </FlexboxLayout> 
+  </StackLayout>
+-->
+</ScrollView>

@@ -1,0 +1,31 @@
+<ScrollView>
+  <StackLayout>
+    <FlexboxLayout justifyContent="space-between">
+      <Image src="res://back" width="30" height="30" style="margin-left: 20; margin-top: 20" (tap)="goBack()"></Image>
+      <label text="Refer a Friend" style="font-size: 30;color: #005f86; margin-top: 10"></label>
+      <Image src="" width="20" height="25"></Image>
+    </FlexboxLayout>
+    <FlexboxLayout justifyContent="center">
+      <Image src="res://refer_friend_blue" width="200" height="200"></Image>
+    </FlexboxLayout>
+    <FlexboxLayout justifyContent="space-between">
+      <label fontSize="23" text="Refer a Friend and recieve 10 points towards a free month!" textWrap="true" class="referText"></label>
+    </FlexboxLayout>
+    <StackLayout class="form">
+      <StackLayout class="input StackLayout_refer" orientation="horizontal">
+        <Image src="res://user_name" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Name" keyboardType="email"  autocorrect="false"
+          autocapitalizationType="none" class="signinupTextfield"></TextField>
+      </StackLayout>
+      <StackLayout class="input StackLayout_refer" orientation="horizontal">
+        <Image src="res://email_grey" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Email" keyboardType="email"  autocorrect="false"
+          autocapitalizationType="none" class="signinupTextfield"></TextField>
+      </StackLayout>
+      <FlexboxLayout style="margin-top: 10;" justifyContent="center">
+        <Button text="Send Referral" class="btnRefer" style="width: 47%;"  (tap)="openDeactivateModal()"></Button>
+      </FlexboxLayout>
+    </StackLayout>
+
+  </StackLayout>
+</ScrollView>

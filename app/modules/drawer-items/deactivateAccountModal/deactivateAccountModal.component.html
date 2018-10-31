@@ -1,0 +1,31 @@
+<Page loaded="loaded" height="60%" width="100%">
+   <StackLayout class="modal-view-style modal"  verticalAlignment="top" >
+   <FlexboxLayout justifyContent="space-between">
+	<Image src="" width="20" height="20" ></Image>
+	<Image src="" width="20" height="20" ></Image>
+	<Image src="res://x_grey" width="50" height="50" (tap)="close()" ></Image>
+	</FlexboxLayout>
+
+	<FlexboxLayout flexDirection="column">
+	<label class="bold_text1" text="Are you sure you want to deactivate your account?" textWrap="true"></label>
+  <label class="bold_text" text="If so we'll be sad to see you go." textWrap="true"></label>
+  <label class="bold_text" text="If you do choose to go, we'd appriciate you telling us why so we can improve your future experience with Balance Position." textWrap="true"></label>
+  </FlexboxLayout>
+
+  <FlexboxLayout style="margin-top:10;">
+  <label text="I am deactivating because... " textWrap="true"  style="font-size: 15;margin-left: 50; color: #888b8d;"></label>
+  </FlexboxLayout>
+
+  <FlexboxLayout justifyContent="center">
+
+  <TextView  style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="40%" width="80%" hint="Type here.."   class="input input-border"></TextView>
+  </FlexboxLayout>
+
+
+	<FlexboxLayout justifyContent="center">
+  <Button text="Deactivate Account" class="btnDeactivate" (tap)="close()"></Button>
+  </FlexboxLayout>
+
+
+   </StackLayout>
+   </Page>

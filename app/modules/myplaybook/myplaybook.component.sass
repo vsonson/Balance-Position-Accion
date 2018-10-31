@@ -1,0 +1,112 @@
+@import './../../sass/variables.sass'
+.my-playbook
+	flex-direction: column
+	&>._header
+		height: 62
+		min-height: 62
+		align-items: center
+		justify-content: space-between
+		padding: 0 11px
+		&>._ttl
+			color: $primary
+			font-weight: bold
+			font-size: 23px
+	&>._sub-header
+		height: 36
+		min-height: 36
+		align-items: flex-start
+		justify-content: center
+		&>._sub-ttl
+			color: $primary
+			font-size: 19px
+	& ._bar-container
+		height: 100
+		min-height: 100
+		flex-direction: column
+		&>._avtr
+			min-height: 60
+			height: 60
+			align-items: flex-end
+			&>FlexboxLayout
+				flex-grow: 1
+				align-items: center
+				justify-content: center
+				min-width: 33.333%
+				max-width: 33.333%
+				&>Image
+					height: 70
+					width: 70
+		&>._bars
+			height: 35
+			min-height: 35
+			flex-direction: column
+			&>.arrow
+				min-height: 13
+				height: 13
+				&>FlexboxLayout
+					flex-grow: 1
+					justify-content: center
+					min-height: 13
+					height: 13
+					&>FlexboxLayout
+						min-width: 13
+						width: 13
+						min-height: 13
+						height: 13
+						background-color: $green
+						transform: rotate(135) translateY(7)
+						&._red
+							background-color: $red
+						&._yellow
+							background-color: $yellow
+			&>._bar
+				height: 22
+				min-height: 22
+				width: 100%
+				margin: 0 11px
+				&>Label
+					height: 22
+					min-height: 22
+					flex-grow: 1
+					&._red
+						background-color: $red
+					&._green
+						background-color: $green
+					&._yellow
+						background-color: $yellow
+	&>.content
+		flex-grow: 1
+		padding: 11px
+		position: absolute
+		&.swipe-left
+			& .playbook-router-layout
+				animation-name: swipeToLeft
+				animation-duration: 0.18s
+				animation-timing-function: ease-in-out
+		&.swipe-right 
+				animation-name: swipeToRight
+				animation-duration: 0.18s
+				animation-timing-function: ease-in-out
+		& .color-blue
+			color: #cc0000
+	&>.dots
+		min-height: 22
+		height: 22
+		align-items: center
+		justify-content: center
+		&>Label
+			width: 11
+			min-width: 11
+			height: 11
+			min-height: 11
+			border-width: 2px
+			border-color: $primary
+			border-style: solid
+			margin: 0 9px
+			border-radius: 50em
+			&.active
+				background-color: $primary
+
+.underline
+	text-decoration: underline
+	color: blue

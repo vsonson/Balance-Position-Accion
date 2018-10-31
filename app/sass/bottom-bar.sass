@@ -1,0 +1,39 @@
+@import 'variables.sass'
+.bottom-bar
+	height: 63
+	width: 100%
+	align-items: center
+	border-color: #d9d9d9
+	border-top-width: 2px
+	border-style: solid
+	background-color: #fff
+	&>.items
+		flex-grow: 1
+		flex-flow: 1
+		color: #777
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		height: 100%
+		&.active
+			color: $primary
+			animation-name: itemActiveAnim
+			animation-duration: 0.234s
+			animation-timing-function: ease-in-out
+		&>.icon
+			font-size: 23px
+		&>.text
+			font-size: 12px
+
+
+@keyframes itemActiveAnim
+	from
+		background-color: #f0f0f0
+		transform: scale(1.1, 1.1)
+		opacity: 0.5
+		border-radius: 50em
+	to
+		background-color: #fff
+		opacity: 1
+		transform: scale(1, 1)
+		border-radius: 0

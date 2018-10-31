@@ -1,0 +1,89 @@
+<RadSideDrawer tkExampleTitle tkToggleNavButton [drawerLocation]="currentLocation" (drawerClosing)="onDrawerClosed($event)">
+  <StackLayout tkDrawerContent class="sideStackLayout" backgroundColor="#fff" borderLeftWidth="2px" borderColor="#d9d9d9" borderStyle="solid">
+    <StackLayout class="sideTitleStackLayout">
+
+    </StackLayout>
+      <ScrollView >
+        <StackLayout class="sideStackLayout" >
+          <FlexboxLayout class="drawerItem" (tap)="navigate('/drawerItems/setting')">
+            <!-- <Image src="~/images/Icons/Settings/noun_684338_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://setting" width="50" height="50"></Image>
+            <Label text="Settings" class="sideLabel"></Label>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="drawerItem" [nsRouterLink]="['/drawerItems/resources']">
+            <!-- <Image src="~/images/Icons/Resources/noun_518028_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://resource_blue" width="50" height="50"></Image>
+            <Label text="Resources" class="sideLabel"></Label>
+          </FlexboxLayout>
+
+        <!--   <FlexboxLayout class="drawerItem" [nsRouterLink]="['/drawerItems/notification']">
+           
+            <Label [text]="'fa-bell' | fonticon" class="fa" fontSize="38px" style="color:#0B6084;"></Label>
+            <Label text="Notifications" class="sideLabel"></Label>
+          </FlexboxLayout> -->
+
+          <FlexboxLayout class="drawerItem" [nsRouterLink]="['/drawerItems/premium']">
+            <!-- <Image src="~/images/Icons/Premium Upgrade/noun_1349357_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://upgrade_blue" width="50" height="50"></Image>
+            <Label text="Premium" class="sideLabel"></Label>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="drawerItem" [nsRouterLink]="['/drawerItems/refer']">
+            <!-- <Image src="~/images/Icons/Refer a Friend/noun_14634_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://refer_friend_blue" width="50" height="50"></Image>
+            <Label text="Refer a friend" class="sideLabel"></Label>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="drawerItem" [nsRouterLink]="['/drawerItems/faq']">
+            <!-- <Image src="~/images/Icons/Help/noun_922772_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://help" width="50" height="50"></Image>
+            <Label text="FAQ" class="sideLabel" ></Label>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="drawerItem" [nsRouterLink]="['/terms_conditions']">
+            <!-- <Image src="~/images/Icons/Terms of Service/noun_1556737_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://terms_service_blue" width="50" height="50"></Image>
+            <Label text="Terms of Service" class="sideLabel"></Label>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="drawerItem" [nsRouterLink]="['/privacy_policy']">
+            <!-- <Image src="~/images/Icons/Privacy Policy/noun_39407_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://privacy_blue" width="50" height="50"></Image>
+            <Label text="Privacy Policy" class="sideLabel"></Label>
+          </FlexboxLayout>
+
+          <FlexboxLayout class="drawerItem" (tap)="navigate('/auth/signin')">
+            <!-- <Image src="~/images/Icons/Logout/noun_1350691_005f86.png" width="50" height="50"></Image> -->
+            <Image src="res://logout_blue" width="50" height="50"></Image>
+            <Label text="Logout" class="sideLabel"></Label>
+          </FlexboxLayout>
+        </StackLayout>
+      </ScrollView>
+
+    </StackLayout>
+
+
+    <StackLayout tkMainContent backgroundColor="#f8f8f8">
+
+     
+
+      <DockLayout width="100%" height="100%" stretchLastChild="true" class="_hmlayout"  [class.blur]="isDrawerOpen">
+        <FlexboxLayout class="_header" dock='top'>
+          <FlexboxLayout class="_ttl">
+            <Label [text]="homeUiScope.appBarTitle"></Label>
+          </FlexboxLayout>
+          <FlexboxLayout class="_mn">
+            <Button (tap)="openDrawer()" class="fa icon btn transparent _mn-icon" borderRadius="50em" text="&#xf0c9;"></Button>
+          </FlexboxLayout>
+        </FlexboxLayout>
+        <FlexboxLayout zIndex="3" class="_bottom-bar" dock="bottom">
+          <bottom-tab></bottom-tab>
+        </FlexboxLayout>
+        <FlexboxLayout flexGrow="1" class="_body">
+          <router-outlet></router-outlet>
+        </FlexboxLayout>
+      </DockLayout>
+
+    </StackLayout>
+</RadSideDrawer>

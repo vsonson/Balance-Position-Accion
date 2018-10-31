@@ -1,0 +1,93 @@
+<StackLayout style="background-color: #FFF" >
+    <FlexboxLayout justifyContent="space-between">
+    <Image src="res://back" width="30" height="30" style="margin-left: 20;" [nsRouterLink]="['/home/dashboard']"></Image>
+    <Image src=""  width="30" height="30"></Image>
+    <Image src=""  width="30" height="30"></Image>
+    </FlexboxLayout>
+<FlexboxLayout class="_notebook">
+    <FlexboxLayout class="_hdr_">
+    <FlexboxLayout class="_date">
+      <FlexboxLayout class='prev active'>
+        <AbsoluteLayout>
+          <button (tap)="prevDate()"></button>
+          <button class="_border" (tap)="prevDate()"></button>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+      <Label [text]="getDateFormatString(date)"></Label>
+      <FlexboxLayout class='next' [class.active]="!disableNextDateBtn">
+        <AbsoluteLayout>
+          <button (tap)="nextDate()"></button>
+          <button (tap)="nextDate()" class="_border"></button>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+    </FlexboxLayout>
+  </FlexboxLayout>
+
+  <FlexboxLayout class="_cont">
+    <Scrollview orientation="vertical">
+      <StackLayout>
+      <!-- general -->
+      <StackLayout  class="list">
+               <StackLayout 
+                    class="_item selected"
+                    *ngFor="let item of notes.general; let index=index;"
+                    (tap)="selectList('general', index)">
+                  <DockLayout class="_label">
+                    <Label [text]="item.name" class="_nm"></Label>
+                    <Label [text]="item.notes" class="_note" textWrap="true"></Label>
+                  </DockLayout>
+                  <FlexboxLayout *ngIf="selectedList.category == 'general' && selectedList.index == index" class="_field">
+                    <TextView hint="Enter Note"  returnKeyType="send" class="input input-border" [(ngModel)]='noteText'></TextView>
+                    <Button [text]="'mdi-check' | fonticon" class="mdi" *ngIf="noteText" (tap)="addNote('general', index)"></Button>
+                  </FlexboxLayout>
+               </StackLayout>
+      </StackLayout>
+
+      <!-- track -->
+      <StackLayout  class="list">
+               <StackLayout class="_item selected">
+                 <DockLayout class="_label">
+                    <Label [text]="'Track'" class="_nm"></Label>
+                    <Label [text]="''" class="_note" textWrap="true"></Label>
+                  </DockLayout>
+               </StackLayout>
+               <StackLayout 
+                    class="_item"
+                    *ngFor="let item of notes.track; let index=index;"
+                    (tap)="selectList('track', index)">
+                  <DockLayout class="_label">
+                    <Label [text]="item.name" class="_nm"></Label>
+                    <Label [text]="item.notes" class="_note" textWrap="true"></Label>
+                  </DockLayout>
+                  <FlexboxLayout *ngIf="selectedList.category == 'track' && selectedList.index == index" class="_field">
+                    <TextView hint="Enter Note"  returnKeyType="send" class="input input-border" [(ngModel)]='noteText'></TextView>
+                    <Button [text]="'mdi-check' | fonticon" class="mdi" *ngIf="noteText" (tap)="addNote('track', index)"></Button>
+                  </FlexboxLayout>
+               </StackLayout>
+      </StackLayout>
+
+
+      <!-- practice -->
+      <StackLayout  class="list">
+          <StackLayout 
+               class="_item selected"
+               *ngFor="let item of notes.practice; let index=index;"
+               (tap)="selectList('practice', index)">
+             <DockLayout class="_label">
+               <Label [text]="item.name" class="_nm"></Label>
+               <Label [text]="item.notes" class="_note" textWrap="true"></Label>
+             </DockLayout>
+             <FlexboxLayout *ngIf="selectedList.category == 'practice' && selectedList.index == index" class="_field">
+               <TextView hint="Enter Note"  returnKeyType="send" class="input input-border" [(ngModel)]='noteText'></TextView>
+               <Button [text]="'mdi-check' | fonticon" class="mdi" *ngIf="noteText" (tap)="addNote('practice', index)"></Button>
+             </FlexboxLayout>
+          </StackLayout>
+ </StackLayout>
+    </StackLayout>
+    </Scrollview>
+
+   
+    
+  </FlexboxLayout>
+</FlexboxLayout>
+</StackLayout>

@@ -1,0 +1,75 @@
+<ScrollView>
+  <StackLayout orientation="vertical">
+
+    <StackLayout orientation="vertical" style="margin-top:20;">
+      <Image src="res://balance_position_logo" width="150" height="100" stretch="aspectFill"></Image>
+    </StackLayout>
+
+    <StackLayout class="form">
+      <StackLayout class=" inputStackLayout" orientation="horizontal">
+        <Image src="res://person_grey" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Name" autocorrect="false" #usr="ngModel" [(ngModel)]="user.name" (focus)="errorStatus.name=false"
+          autocapitalizationType="none" required></TextField>
+      </StackLayout>
+
+      <StackLayout *ngIf="usr.errors && (usr.dirty || usr.touched) || errorStatus.name">
+        <Label class="signinupLable" *ngIf="usr.errors.required" [text]="errorMessage.nameRequired"></Label>
+      </StackLayout>
+
+      <StackLayout class="inputStackLayout" orientation="horizontal">
+        <Image src="res://email_grey" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Email" keyboardType="email" #email="ngModel" [(ngModel)]="user.username"
+          autocorrect="false" autocapitalizationType="none" (focus)="errorStatus.email=false; errorStatus.validEmailId=false"
+          required email></TextField>
+      </StackLayout>
+
+      <StackLayout *ngIf="email.errors && (email.dirty || email.touched) || errorStatus.email || errorStatus.validEmailId">
+        <Label class="signinupLable" *ngIf="email.errors.required" [text]="errorMessage.emailRequired"></Label>
+        <Label class="signinupLable" *ngIf="!email.errors.required && email.errors.email" [text]="errorMessage.emailInvalid"></Label>
+      </StackLayout>
+      <StackLayout class="inputStackLayout" orientation="horizontal">
+        <Image src="res://password_key" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Password" secure="true" #password="ngModel" [(ngModel)]="user.password"
+          (focus)="errorStatus.pass=false" required></TextField>
+      </StackLayout>
+
+      <StackLayout *ngIf="password.errors && (password.dirty || password.touched) || errorStatus.pass">
+        <Label *ngIf="password.errors.required" [text]="errorMessage.passwordRequired" class="signinupLable"></Label>
+      </StackLayout>
+
+      <StackLayout class="inputStackLayout" orientation="horizontal">
+        <Image src="res://password_key" width="25" height="25" stretch="aspectFill"></Image>
+        <TextField class="input signinupTextfield" hint="Repeat Password" secure="true" #repeatPassword="ngModel" [(ngModel)]="user.repeatPassword"
+          (focus)="errorStatus.confirmPass=false;" style="font-size:20;width:80%;margin-bottom:-5;margin-left:5;color:#888b8d;"
+          required></TextField>
+      </StackLayout>
+
+      <StackLayout *ngIf="repeatPassword.errors && (repeatPassword.dirty || repeatPassword.touched) || errorStatus.confirmPass || errorStatus.passNotmatch">
+        <Label *ngIf="repeatPassword.errors.required" [text]="errorMessage.passwordRequired" class="signinupLable"></Label>
+        <Label *ngIf="!repeatPassword.errors.required && errorStatus.passNotmatch" [text]="errorMessage.passwordNotMatched" class="signinupLable"></Label>
+      </StackLayout>
+
+
+
+      <Button [text]="constantsMessage.signUp" class="btnSignIn" (tap)="signup()" [visibility]="!isLoading ? 'visible' : 'collapse'"></Button>
+      <ActivityIndicator row="1" style="margin-top:20;" #activityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'"  width="70" height="70" class="activity-indicator"></ActivityIndicator>
+
+    </StackLayout>
+
+    <FlexboxLayout style="margin-top: 8" justifyContent="center">
+      <Label class="lbl fontten" [text]="constantsMessage.accountExist"></Label>
+      <Label class="blue_link" [text]="constantsMessage.signIn" [nsRouterLink]="['/auth/signin']"></Label>
+    </FlexboxLayout>
+
+    <Label class="lbl fontten" [text]="constantsMessage.signingMessage"></Label>
+
+    <FlexboxLayout style="margin-top: 8" justifyContent="center">
+      <Label class="blue_link" [text]="constantsMessage.privacy" [nsRouterLink]="['/privacy_policy']"></Label>
+      <Label class="lbl fontten" [text]="constantsMessage.and"></Label>
+      <Label class="blue_link" [text]="constantsMessage.terms" [nsRouterLink]="['/terms_conditions']" style="margin-left:-1;"></Label>
+    </FlexboxLayout>
+
+
+
+  </StackLayout>
+</ScrollView>

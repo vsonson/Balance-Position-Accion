@@ -1,0 +1,24 @@
+<ScrollView><Page loaded="loaded" height="70%" width="90%">
+  <StackLayout class="modal-view-style modal" verticalAlignment="top">
+    <FlexboxLayout justifyContent="space-between">
+      <Image src="" width="20" height="20"></Image>
+      <Image src="" width="20" height="20"></Image>
+      <Image src="res://x_grey" width="40" height="30" (tap)="close()"></Image>
+    </FlexboxLayout>
+
+    <FlexboxLayout justifyContent="center">
+      <label text="What causes the color of my data points to change?" textWrap="true" class="faqTextBold"></label>
+    </FlexboxLayout>
+
+    <FlexboxLayout style="margin-top: 10;" justifyContent="center">
+      <label text="This is our secret sauce, so we can’t tell you every detail…but the color changes are caused by your input for each data point. Our mad (data) scientist and team of experts are behind the algorithm.  All you need to know is that the more balanced the area is, the closer to green you’ll be."
+        textWrap="true" style="font-size: 15;margin-left: 10;margin-top:15;" class="faqText"></label>
+    </FlexboxLayout>
+
+    <FlexboxLayout style="margin-top: 10;" justifyContent="center">
+      <label text="Remember, the Balance Position app is not a diagnostic tool. We are here to improve awareness and alert you when things are looking off balance. If you are concerned about your health, please consult with a qualified health professional."
+        textWrap="true" style="font-size: 15;margin-left: 10;margin-top:15;" class="faqText"></label>
+    </FlexboxLayout>
+  </StackLayout>
+</Page>
+</ScrollView>

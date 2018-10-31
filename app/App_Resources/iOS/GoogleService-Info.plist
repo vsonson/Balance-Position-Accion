@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>749790378660-tscnv892onsr5vts72fkfcaaifl3u0vp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.749790378660-tscnv892onsr5vts72fkfcaaifl3u0vp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBS2gzP_gObOpmWyhgeRO7xD02Rc5LtG1g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>749790378660</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.balanceposition.bp</string>
+	<key>PROJECT_ID</key>
+	<string>balance-position</string>
+	<key>STORAGE_BUCKET</key>
+	<string>balance-position.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:749790378660:ios:bb779a3704b90467</string>
+	<key>DATABASE_URL</key>
+	<string>https://balance-position.firebaseio.com</string>
+</dict>
+</plist>

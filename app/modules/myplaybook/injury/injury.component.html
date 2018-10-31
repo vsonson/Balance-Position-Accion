@@ -1,0 +1,187 @@
+<ScrollView>
+
+  <!-- user content -->
+
+  <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="It looks like your body is feeling well! Keep taking care of your body to help prevent injury." textWrap="true"></Label>
+              <Label text=""></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Fueling%20For%20Recovery.pdf')">
+                    <FormattedString>
+                      <Span text="Be proactive in preventing injury. Work with your athletic trainer, strength and conditioning coach, and coach to develop a strength, "></Span>
+                      <Span text="nutrition" class="underline"></Span>
+                      <Span text=", prehab, and rehab plan to minimize physical deficiencies and to optimize durability and performance."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true">
+                    <FormattedString>
+                      <Span text="Tailor your recovery to what phase of your season you’re in and also with how your body is feeling. The more strenuous and more fatigued your body is, the more time you should spend on " ></Span>
+                      <Span text="recovery techniques."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>  
+                    <Label text="a. Recovery Techniques"></Label>
+                  
+                      <Label textWrap="true" text="i.   Stretch, roll out, or floss body "></Label>
+                      <Label textWrap="true" text="ii.  Ice"></Label>
+                      <Label textWrap="true" text="iii. Refuel your body"></Label>
+                      <Label textWrap="true" text="iv.  Rehab"></Label>
+                      <Label textWrap="true" text="v.   Yoga and mindful meditation"></Label>
+                      <Label text="" ></Label>  
+                  
+                   <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Manage your stress. Physical and mental stress can increase the likelihood for injury. De-stress physically by getting enough sleep, water, and nutrients. De-stress mentally with the " ></Span>
+                      <Span text="Stress Guided Meditation program." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Injury has a huge impact on our mental health as athletes. Let’s work through this physical injury with great mental wellness." textWrap="true"></Label>
+              <Label text=""></Label>
+                  <Label text="Communicate what you’re experiencing to your team doctor, psychologist, or athletic trainer. There could be several explanations for what you’re experiencing, and it’s critical that they’re aware of how you’re feeling." textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      
+                      <Span text="When our bodies aren’t functioning at their best, it’s important to be aware of how it’s affecting us mentally. Work to increase your self-awareness with the "></Span>
+                      <Span text="Balance Fundamentals Program" class="underline"></Span>
+                      <Span text="in the mindfulness library."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNotebook()">
+                    <FormattedString>
+                      <Span text="Stay disciplined with time management. Making time for prehab, rehab, and recovery is critical to managing your way back to full strength. List your schedule and demands in your " ></Span>
+                      <Span text="NoteBook" class="underline"></Span>
+                      <Span text=", and organize them in order of importance to optimize the healing process." ></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="Regardless of the severity or type of injury, it’s important to stay involved in all aspects of your life and to connect with people both on and off the team. Reach out to people in your " ></Span>
+                      <Span text="Network" class="underline"></Span>
+                      <Span text=" for reassurance of your value to the team and other aspects of your life." ></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Being unable to compete for an extended period of time can have serious, negative consequences on the mental health of an athlete. Be diligent in taking care of yourself, acknowledge how you’re feeling, and lean on your Network and trained professionals to help you through it." textWrap="true"></Label>
+              <Label text=""></Label>
+              <Label text="You can do this! " textWrap="true"></Label>
+             
+                  <Label text="When injury takes us out of the game, it’s important to stay connected with the team but also to engage in activities outside of athletics. You are more than just an athlete. Take this time to nurture other talents and interests in your life, join a club or group on campus, do volunteer work, etc." textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="It’s essential to utilize your professional network. Work closely and candidly with your athletic trainer, team doctor, psychologist, strength and conditioning coach, and coach to develop a plan that works best for you. If you can’t play, talk through ways that you can still make an impact. Communicate your needs and feelings, so they can support you. "></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="The stress, surprise, and sometimes trauma of an injury can have a huge mental impact. Strengthen your resiliency, ability to take control of your thoughts, and ability to deal with emotions with mindfulness practice. Listen to the " ></Span>
+                      <Span text="Progressive Relaxation" class="underline"></Span>
+                      <Span text=" program." ></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoResources()">
+                      <FormattedString>
+                          <Span text="*Remember, text and call options in the "></Span>
+                          <Span text=" Resources " class="underline"></Span>
+                          <Span text=" page are always available in the event of emergency."></Span>
+                      </FormattedString>
+                    </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+  
+            </StackLayout>
+          </StackLayout>
+
+        </FlexboxLayout> 
+    </StackLayout>
+
+
+    <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Promote and cultivate a care-seeking culture that will encourage the user to talk with you if and when there’s a problem with their physical health. It’s also important to encourage "></Span>
+                      <Span text="proper recovery" class="underline"></Span>
+                      <Span text=" and injury prevention techniques. "></Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-y-5 m-l-15">
+                    <Label tex="a. Recovery Techniques"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Stretch, roll out, or floss body "></Label>
+                      <Label textWrap="true" text="ii.  Ice"></Label>
+                      <Label textWrap="true" text="iii. Refuel your body"></Label>
+                      <Label textWrap="true" text="iv.  Rehab"></Label>
+                      <Label textWrap="true" text="v.   Yoga and mindful meditation"></Label>
+                    </StackLayout>
+                  </StackLayout>
+                  <Label textWrap="true"  text="When engaging with the athlete, it’s critical to always focus on the whole individual and not just their athlete persona. Invest in their talents and interests off the field to build self-worth outside of athletics so that if/when injury occurs the negative impact on their mental health is minimized. "></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/concussion-diagnosis-and-management-best-practices')">
+                    <FormattedString>
+                      <Span text="Be on the lookout for when an athlete is overworking themselves or overtraining. Mental and physical stress can increase the risk of injury. Help the athlete manage their stress by promoting self-care, listening to the "></Span>
+                      <Span text="Mindfulness for Stress" class="underline"></Span>
+                      <Span text=" program, and educating them on the different resources they have available to them. "></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Support the athlete throughout each phase of their injury. Injury takes a toll mentally and physically on athletes. While they are transitioning through the process, check in on them frequently (message icon), ask how you can best support them, and encourage them to keep taking care of themselves. "></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="Because physical activity is such a big part of an athlete’s life, when activity is limited, there can be negative consequences. Stay on top of this by consulting with professionals like the athletic trainer, strength and conditioning coach, team doctor, and nutritionist. Work together with the athlete to tailor an activity and nutrition plan that will serve in the best interest of the athlete’s long term physical and mental health. "></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="The time required for rehab, prehab, and recovery when an injury is present can become overwhelming for an athlete. Help them manage their time by meeting with them and talking through their schedule and demands. Work with them to prioritize their schedule to take some unnecessary stress of of their plate."></Label>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/2007_managing_mental_health_0.pdf')">
+                    <FormattedString>
+                      <Span text="As a network person, it is critical to know the signs and symptoms for when an athlete is struggling with their mental health. Be prepared with how to "></Span>
+                      <Span text="handle a situation" class="underline"></Span>
+                      <Span text=" when an athlete comes to you as well as when it’s time to approach the athlete. Remain sensitive, empathetic, and understanding throughout the process."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="Be familiar with campus and department protocol" class="underline"></Span>
+                      <Span text=", and refer the athlete to the appropriate professional when it’s time. Encourage care-seeking for athletes. Know your role in the process. Listen to the athlete, support them, and guide them to the right professional help. Be empathetic to what the athlete is going through. "></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" text="Empower the athlete with purpose with and away from the team. What role can they play with the team if they are unable to participate? Where can they find additional fulfillment outside of athletics when they can’t play? Help them build their other roles and personas as an individual during this time.">
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+-->
+
+</ScrollView>

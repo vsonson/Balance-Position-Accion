@@ -1,0 +1,159 @@
+<ScrollView>
+
+  <!-- user content -->
+
+   <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+          <StackLayout class="pb-content smallLabel" visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="Your focus is sharp! Awesome work. Let’s keep it that way. " textWrap="true"></Label>
+              <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                <FormattedString>
+                  <Span text="Practicing mindfulness has a great impact on our focus. Continue practicing by listening to the " ></Span>
+                  <Span text="Balance Fundamentals Program." class="underline" ></Span>
+                </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" text="Stress can get in the way of our ability to focus. Manage your stress daily with self-care like getting outside, listening to music, and spending time with friends."></Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/static/champion/you-snooze-you-win/')">
+                  <FormattedString>
+                    <Span text="Sleep is critical to maintaining focus and overall cognitive function. Shoot for at least 8 hours a night " ></Span>
+                    <Span text="to maximize performance." class="underline" ></Span>
+                  </FormattedString>
+              </Label>
+        
+            </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel" visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Your focus is wavering a bit. Let’s organize a plan to sharpen it. You’ve got this!" textWrap="true"></Label>
+                <Label text=""></Label>
+                  <Label textWrap="true" text='Organize. The more organized your schedule and “to do” list are, the better you’ll be able to move from one item to the next. Prioritize what needs to get done today and what can wait. Take care of the most important items first.'></Label>
+                  <Label text="" ></Label>  
+                  <Label textWrap="true" (tap)="gotoNotebook()">
+                  <FormattedString>
+                    <Span text="Practice Mindfulness. Mindfulness will help teach you how to take control of your thoughts. Listen to the 'Preparing for Competition' single and keep track of your progress with the " ></Span>
+                    <Span text="Notebook." class="underline" ></Span>
+                  </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" text="When you’re doing work, put your phone on airplane mode or put it in another room where you won’t hear it. Commit to staying off your phone until a certain task is completed. "></Label>
+                <Label text="" ></Label>    
+              </StackLayout>
+
+</StackLayout>
+
+              <StackLayout class="pb-content smallLabel" visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Your focus is seriously lacking and we need to get it back on track. Things will get better. We just have to put the work in! " textWrap="true"></Label>
+                  <Label text=""></Label>
+                    <Label textWrap="true" text="Talk with a professional like a psychologist, counselor, doctor, or athletic trainer about what you’ve been experiencing. Work with them to get a plan in action to improve your focus. "></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="Get rid of unnecessary distractions. Get your work done in an isolated, quiet location, and put any unnecessary forms of technology aside or in another room. Temporarily delete time killing social media apps that you use mindlessly."></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()" >
+                      <FormattedString>
+                        <Span text="Set a goal to commit to practicing mindfulness five days per week. Dedicate yourself to finishing the " ></Span>
+                        <Span text=" Balance Fundamental Program." class="underline" ></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>  
+                  <Label textWrap="true" (tap)="gotoResources()">
+                      <FormattedString>
+                          <Span text="*Remember, text and call options in the "></Span>
+                          <Span text=" Resources " class="underline"></Span>
+                          <Span text="page are always available in the event of emergency."></Span>
+                      </FormattedString>
+                    </Label>
+                </StackLayout>
+                </StackLayout>
+                <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+      
+                </StackLayout>
+              </StackLayout>
+      </FlexboxLayout> 
+  </StackLayout>
+
+  <!-- network content 
+
+    <StackLayout class="playbook-router-layout" visibility="{{type == 'network' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+         
+           <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+            <Label text="How you can help {{user.name}}: " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/parents/growth-mindset-parenting')">
+                  <FormattedString>
+                    <Span text="The next time you talk with them, choose one or two specific examples you’ve noticed where they’ve used their focus for positive results and acknowledge their effort. This "></Span>
+                    <Span text="growth mindset" class="underline"></Span>
+                    <Span text=" oriented feedback will encourage them to stay on top of it."></Span>
+                  </FormattedString>
+                </Label>
+                <Label text="" ></Label>  
+                <Label textWrap="true" text="Continue to cultivate your relationship with them by asking them how everything is going. Even when things are seemingly going well, the person is still balancing a lot. Listen to what they tell you, validate their feelings, and let them know you’ve got their back."></Label>
+                <Label text="" ></Label>  
+                <Label textWrap="true" text="Remind them to take time for fun. Recommend hanging with friends, taking time away from their “to do” list, and relaxing. Athletes are under a lot of pressure and need time to unwind."></Label>
+            </StackLayout>
+          </StackLayout>
+
+
+          <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+            <Label text="How you can help {{user.name}}: " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" text="Reach out (message and call icon) and ask them how they’re doing. Ask them directly how you can best help support them."></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString>
+                    <Span text="Recommend practicing mindfulness. Before you make your recommendation, have a "></Span>
+                    <Span text="Program" class="underline"></Span>
+                    <Span text=" in mind, and be ready to back it up with some insight on how it could help."></Span>
+                  </FormattedString>
+                </Label>
+                <StackLayout class="m-y-3 m-l-15">
+                    <Label textWrap="true" text="a) Effects of Mindfulness"></Label>
+                    <StackLayout class="m-y-3 m-l-15">
+                      <Label textWrap="true" text="1) Reduces Rumination "></Label>
+                      <Label textWrap="true" text="2) Reduces Stress"></Label>
+                      <Label textWrap="true" text="3) Increases Focus and Memory"></Label>
+                      <Label textWrap="true" text="4) Decreases Emotional Reactivity"></Label>
+                  </StackLayout>
+                </StackLayout>
+                <Label textWrap="true" text="Sometimes the burden of too many obligations gets in the way of our focus. Help them prioritize. Ask them to discuss what they have on their plate, and then go through and prioritize from “most important” to “least important.”"></Label>
+            </StackLayout>
+          </StackLayout>
+
+
+
+          <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+            <Label text="How you can help {{user.name}}: " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+                <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/2007_managing_mental_health_0.pdf')">
+                  <FormattedString>
+                    <Span text="Make a referral to the appropriate health professional." class="underline"></Span>
+                    <Span text="It’s important to get the student-athlete the adequate help before things spiral. Be proactive, and stay transparent with the student-athlete. Make it clear you’re coming from a place of care and worry."></Span>
+                  </FormattedString>
+                </Label>
+                <Label text="" ></Label> 
+                <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/mind-body-and-sport-potential-barriers-accessing-mental-health-services')">
+                  <FormattedString>
+                    <Span text="When you communicate with the student-athlete and other team members, "></Span>
+                    <Span text=" be mindful of what could be getting in the way of help-seeking." class="underline"></Span>
+                    <Span text=" Decrease the feeling of stigma by emphasizing the importance of taking care of the problem and encouraging the strength it takes to speak up."></Span>
+                  </FormattedString>
+                </Label> 
+                <Label text="" ></Label>  
+                <Label textWrap="true" text="Let them know that things will get better with time, that what they’re experiencing will pass. Remind them of the good they’re doing and that you’re proud of them for taking action to better their situation."></Label>
+            </StackLayout>
+          </StackLayout>
+
+
+      </FlexboxLayout> 
+  </StackLayout>
+-->
+
+</ScrollView>

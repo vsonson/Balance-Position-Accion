@@ -1,0 +1,94 @@
+@import '~nativescript-theme-core/scss/skins/blue/_index.scss';
+@import './sass/main.sass';
+@import './modules/auth/auth.component.scss';
+
+
+
+$font-20pt			: 20;
+$font-25pt			: 25;
+$font-30pt			: 30;
+$font-10pt			: 10;
+$font-15pt			: 15;
+$grey				: #888b8d;
+$margin-10pt        :10;
+$margin-30pt        :30;
+$margin-5pt        :5;
+
+
+.fa {
+	font-family: FontAwesome, fontawesome-webfont;
+}
+
+
+.sideLabel{
+  
+  font-size: 20;
+  margin-top: 13;
+  margin-left: 20;
+  color:$grey;
+}
+.drawerItem{
+  margin-left: $margin-10pt;
+  margin-top: $margin-10pt;
+  padding-bottom: 10;
+}
+.sideTitleStackLayout
+{
+  margin-top: $margin-10pt;
+}
+.settings
+{
+border-width: 0 0 1 0;
+border-color: $grey; 
+margin: 5 10;
+}
+
+.startLable{
+	font-size: 18;
+	margin-left: 5;
+  margin: 5 0;
+}
+.fpTextfield{
+	font-size:$font-20pt;
+	width:80%;
+	margin-bottom:-5;
+	color:$grey;
+	margin-left:$margin-5pt;
+}
+.startLable_help{
+	font-size: $font-25pt;
+	margin-left: 5;
+  color:$grey;
+}
+.alertLable{
+	font-size: $font-15pt;
+	color: red;
+}
+.referText
+  {
+  font-size: 30;
+  margin: 5;
+  color:$grey;
+  text-align: center;
+  }
+  .premiumText
+  {
+  font-size: 15;
+  color:$grey;
+  text-align: center;
+  }
+  .premiumTextBold
+  {
+  font-weight: bold;
+  font-size: 20;
+  color:$grey;
+  text-align: center;
+  }
+  
+.swipe-disabled {
+  opacity: 0.7;
+}
+.green {
+  color: green;
+}
+

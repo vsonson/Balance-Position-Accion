@@ -1,0 +1,180 @@
+<ScrollView>
+
+  <!-- user content -->
+
+  <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+                    <Label textWrap="true">
+                        <FormattedString>
+                            <Span text="Looking good!  Let’s keep working to stay healthy. "></Span>
+                          </FormattedString></Label>
+                          <Label text=""></Label>
+                          </StackLayout>
+              <StackLayout class="m-y-15 m-x-15">
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/Performance%20Hydration%20Fact%20Sheet.pdf')">
+                    <FormattedString>
+                      <Span text="Stay hydrated. " class="underline"></Span>
+                      <Span text="Constant hydration is critical for the physical and mental wellness of athletes. Our brains and entire body need enough water to perform at their best."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label text="Trade some screen time for time outside. Try to unplug from technology for an extra hour each day. Your body and brain will thank you for the break. " textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Stress can severely impact our physiology. Manage your stress by practicing mindfulness regularly. Listen to the duration of the " ></Span>
+                      <Span text="Balance Fundamentals Program." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Something’s not right.  Headache and digestive issues are both important signals from our body. Let’s take action before things get worse." textWrap="true"></Label>
+              <Label text=""></Label>
+                  <Label text="Communicate what you’re experiencing to your team doctor, psychologist, or athletic trainer. There could be several explanations for what you’re experiencing, and it’s critical that they’re aware of how you’re feeling." textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      
+                      <Span text="Self-awareness is required to understand what could be contributing to how you’re feeling. Build your self-awareness with the "></Span>
+                      <Span text="Stress Guided Meditation." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label text="Trade some screen time for time outside. Try to unplug from technology for an extra hour each day. Your body and brain will thank you for the break. " textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="Constant stress, worry, and pressure can change our physiology for the worse. Reach out to someone in your " ></Span>
+                      <Span text="Network" class="underline"></Span>
+                      <Span text=" and plan something fun. It’s important to take some downtime to relax and laugh a bit." ></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="It’s critical to take action right now, including consulting with a healthcare professional. Let’s deal with this and get our health back on track." textWrap="true"></Label>
+              <Label text=""></Label>
+                  <Label text="Intense headache and nausea are serious and could be an indicator of concussion or other serious ailment. Talk to a health professional immediately to get to the root of the problem and put a plan in place." textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="Make sure you’re also communicating what’s going on with people in your " ></Span>
+                      <Span text="Network" class="underline"></Span>
+                      <Span text=" .The more they know what’s going on, the more they can help you. Communicate what you need from them." ></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.sportsrd.org/wp-content/uploads/2015/07/Healthy-Grocery-Shopping.pdf')">
+                    <FormattedString>
+                      <Span text="Stay disciplined in your self-care. " ></Span>
+                      <Span text="Make sure you are hydrated and eating a healthy diet" class="underline"></Span>
+                      <Span text=" .And again make sure you consult a healthcare professional immediately." ></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoResources()">
+                    <FormattedString>
+                        <Span text="*Remember, text and call options in the "></Span>
+                        <Span text=" Resources " class="underline"></Span>
+                        <Span text=" page are always available in the event of emergency."></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+  
+            </StackLayout>
+          </StackLayout>
+        </FlexboxLayout> 
+    </StackLayout>
+
+
+    <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-x-15">
+                  <Label textWrap="true" (tap)="goToUrl('http://www.sportsrd.org/wp-content/uploads/2015/07/Healthy-Grocery-Shopping.pdf')">
+                    <FormattedString>
+                      <Span text="Maintain communication when things are going well. Connect with them while they’re feeling good to build the strength of your relationship. Encourage healthy lifestyle choices that. "></Span>
+                      <Span text="foster good brain and gut health." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/2007_managing_mental_health_0.pdf')">
+                    <FormattedString>
+                      <Span text="Remain mindful of their schedule and how they might be feeling. High stress, increased demands, or transition periods could trigger decline in health. Empathy is key. "></Span>
+                      <Span text="Stay proactive in your approach with them." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/concussion-diagnosis-and-management-best-practices')">
+                    <FormattedString>
+                      <Span text="Keep your ears and eyes open for head injury throughout their sport participation. Stay up to date on protocols and "></Span>
+                      <Span text="best practices for when an athlete suffers a head injury." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-x-15">
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/2007_managing_mental_health_0.pdf')">
+                    <FormattedString>
+                      <Span text="Know your role in the process." class="underline"></Span>
+                      <Span text=" See the signs for change, maintain open lines of communication so they come to you, and refer them to a health professional whether it’s headache or digestive issues."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/2007_managing_mental_health_0.pdf')">
+                    <FormattedString>
+                      <Span text="Go the extra mile "></Span>
+                      <Span text="to cultivate a care-seeking culture." class="underline"></Span>
+                      <Span text=" Encourage reaching out for help when it’s needed, practice empathy, and speak from of care and concern and not judgement. Validate what the person is experiencing."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Stress, anxiety, pressure can cause both headaches and digestive issues. Help the athlete manage possible hyperarousal with the "></Span>
+                      <Span text="Mindfulness for Stress" class="underline"></Span>
+                      <Span text=" program in the library."></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-x-15">
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="It’s important to help guide them in the direction of an appropriate healthcare professional immediately." class="underline"></Span>
+                      <Span text=" Focus on your messaging coming from a place of caring and not controlling. Remind them that you’re there for them and are worried about them."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/concussion-diagnosis-and-management-best-practices')">
+                    <FormattedString>
+                      <Span text="Follow protocol in the event of a head injury." class="underline"></Span>
+                      <Span text=" Check with the institution’s guidelines and follow protocol to ensure the athlete receives proper care. Communicate accordingly with all appropriate staff and professionals."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" text="Remind them of the bigger picture. Physical ailments like severe headache and nausea may temporarily take them out of athletic play and can hinder the athlete’s self-reporting. Focus on using language that emphasizes sport, life after sports, and life outside of sports. Quality of life is greater than the game.">
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+-->
+
+</ScrollView>

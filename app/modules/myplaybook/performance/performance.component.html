@@ -1,0 +1,218 @@
+<ScrollView height="100%">
+
+   <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+          <StackLayout class="pb-content smallLabel" visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+            <Label text="Let’s refocus a bit and see how we can get you feeling better about your performance. " textWrap="true"></Label>
+            <StackLayout class="m-y-15 m-x-15">
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/science/Impact')">
+                  <FormattedString>
+                    <Span text="Check your mindset. Work to obtain a " ></Span>
+                    <Span text=" Growth Mindset." class="underlinedtext" ></Span>
+                    <Span text="A growth mindset sparks motivation and achievement. " ></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="" ></Label>    
+              <Label text="Growth Mindset Characteristics"></Label>
+              <Label text="i.   Traits can be changed " textWrap="true"></Label>
+              <Label text="ii.  Intelligence and achievement can be obtained with work " textWrap="true"></Label>
+              <Label text="iii. Failure is a part of learning and a step in the right direction " textWrap="true"></Label>
+        
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString >
+                  <Span text="Make mindfulness training a priority.  Decide to commit to the " ></Span>
+                  <Span text="Balance Fundamentals Program" class="underlinedtext" ></Span>
+                  <Span text="and practice at least 5 days a week. This commitment and practice will extend into other areas of your life. "></Span>
+                  </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="gotoNetwork()">
+                  <FormattedString>
+                    <Span text="Reach out to someone in your " ></Span>
+                    <Span text="Network. " class="underlinedtext" ></Span>
+                    <Span text="Plan to get dinner and catch up. Ask them how they feel you are performing in the various areas of your life they see you in.  It’s good to get a different viewpoint on your performance to understand if your self-reflection is distorted. " ></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="" ></Label>    
+              
+            </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel" visibility="{{color == 'red' ?  'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="How you’re feeling about your performance could use a serious boost. It’s time to take some real steps to improve your performance and/or your perception of it. Things will improve with practice, reflection and input from your trusted network. " textWrap="true"></Label>
+                <Label text=""></Label>
+                <Label textWrap="true" >
+                    <FormattedString>
+                      <Span text="Schedule an appointment with a health professional to discuss your performance. Reach out to a doctor, athletic trainer, or psychologist and talk about what you’re going through. Sometimes a third party opinion can help give us clarity and direction. They will help you understand if your perception of your performance is accurate or distorted and how to improve accordingly. " ></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+                <Label textWrap="true" (tap)="gotoNotebook()">
+                    <FormattedString >
+                    <Span text="Try to find some positivity. Make a list in your " ></Span>
+                    <Span text="Notebook" class="underlinedtext" ></Span>
+                    <Span text="  about three things that are going well despite how you’re feeling. Give yourself credit for the things that are going well even though it may not feel like it. "></Span>
+                    </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="Reach out to someone in your " ></Span>
+                      <Span text="Network." class="underlinedtext" ></Span>
+                      <Span text=" Let them know how you’re feeling and get their opinion on your performance in the areas they see you in. The opinions of those we trust can help us confirm the areas for improvement in our performance or identify when we are being too hard on ourselves." ></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+                <Label textWrap="true" (tap)="gotoResources()">
+                  <FormattedString>
+                    <Span text="*Remember, text and call options in the " ></Span>
+                    <Span text="Resources" class="underlinedtext" ></Span>
+                    <Span text=" page are always available in the event of emergency." ></Span>
+                  </FormattedString>
+              </Label>
+
+              </StackLayout>
+              </StackLayout>
+  
+              
+              <StackLayout class="pb-content smallLabel" visibility="{{color == 'green' ?  'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Awesome work! " textWrap="true"></Label>
+                <Label text="Keep putting in the work, and you’ll feel even better about how you’re doing! " textWrap="true"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                      <FormattedString>
+                        <Span text="Stay on track with the 'Preparing for Competition, and " ></Span>
+                        <Span text="Reflecting on Performance" class="underlinedtext" ></Span>
+                        <Span text=" singles. " ></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>    
+                  <Label textWrap="true" (tap)="gotoNotebook()">
+                      <FormattedString >
+                      <Span text="Each night, reflect in your " ></Span>
+                      <Span text="Notebook" class="underlinedtext" ></Span>
+                      <Span text=" about one thing you excelled at and one thing you could improve upon. Build on the positives, and fine tune places where you need some work. "></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true">
+                      <FormattedString>
+                        <Span text="Remain proactive." ></Span>
+                        <Span text=" The more work you put in ahead of time, the more successful you’ll be later on. " ></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text="" ></Label>    
+                  <Label text="Ways to be proactive: "></Label>
+                  <Label text="i.   Keep your aim at 8 hours of sleep per night " textWrap="true"></Label>
+                  <Label text="ii.  Prioritize your schedule and “to do” list to increase efficiency " textWrap="true"></Label>
+                  <Label text="iii. Prepare, practice, and study. Performance requires work. " textWrap="true"></Label>
+            
+                </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+      
+                </StackLayout>
+              </StackLayout>
+      
+      </FlexboxLayout> 
+  </StackLayout>
+
+  <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Shoot them an encouraging message (message icon) saying how you’ve noticed the improvements from the hard work they’re putting in towards their performance mindset. Build the relationship by asking about other areas of their lives outside of athletics. "></Label>
+                 
+                  <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/science/Impact')">
+                    <FormattedString>
+                      <Span text="Encourage their "></Span>
+                      <Span text="Growth Mindset" class="underline"></Span>
+                      <Span text=" by asking them what they’re specifically working on that is allowing them success."></Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label tex="a. Growth Mindset Characteristics:"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Traits can be changed"></Label>
+                      <Label textWrap="true" text="ii.  Intelligence and achievement can be obtained with work"></Label>
+                      <Label textWrap="true" text="iii. Failure is a part of learning and a step in the right direction"></Label>
+                    </StackLayout>
+                  </StackLayout>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Encourage them to continue to build their self-esteem by listening to the "></Span>
+                      <Span text="Mindfulness for Performance" class="underline"></Span>
+                      <Span text=" program and other positive behaviors."></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Take some time to reflect on how they’ve been doing on the field, in the classroom, and socially lately. Does reality match their perception? When you next talk to them about how they’re doing, be conscious of their perception vs. reality."></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="Help them prioritize their next steps. Put areas that have the most influence on how they’re feeling at the top and areas with little influence at the bottom. "></Label>
+                  <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/parents/growth-mindset-parenting')">
+                    <FormattedString>
+                      <Span text="As athletes, perceived performance carries a lot of weight. Offset some of the negative feelings by acknowledging the positives you’ve been seeing. Remember to use language that encourages the "></Span>
+                      <Span text="Growth Mindset." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label tex="a. GGrow Mindset Oriented Reminders"></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Verbally value effort, work, and challenging oneself instead of fixed traits"></Label>
+                      <Label textWrap="true" text="ii.  Losing, failure, and rejection are learning experiences."></Label>
+                      <Label textWrap="true" text="iii. Improvement comes with hard work and time "></Label>
+                      <Label textWrap="true" text="iv.  Challenges are opportunities for growth"></Label>
+                    </StackLayout>
+                  </StackLayout>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                 <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="Encourage <user> to seek help from the professional resources that are available to them like the counseling center, sport psychologist, athletic trainer, and others. Whether their performance is as bad as they perceive it or not, their self-esteem is troublingly low and needs to be turned around. "> </Span>
+                      <Span text="Follow protocol." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" text="Listen to the language they use when talking about performance. Do they believe they are capable of changing the situation or that they are doomed? Empower them with the belief that with time, effort, and help, they can take control of the situation."></Label>
+                  < 
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text='When you’re talking with them, shed light on some positive things you’re seeing out of them. Don’t forget about the '></Span>
+                      <Span text="little things" class="underline"></Span>
+                      <Span text="that they’re doing well."> </Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                      <Label textWrap="true" text="i.   Getting to class every day"></Label>
+                      <Label textWrap="true" text="ii.  Putting in extra time with their sport"></Label>
+                      <Label textWrap="true" text="iii. Broadening their circles by engaging with life outside of athletics"></Label>
+                      <Label textWrap="true" text="iv.  Asking for help when they need it"></Label>
+                  </StackLayout>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+-->
+
+
+</ScrollView>

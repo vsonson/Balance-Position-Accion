@@ -1,0 +1,163 @@
+
+
+.btn {
+    font-size: 20;
+}
+
+.pdf{
+  background-color: #FFF;
+}
+
+.page {
+font-family: "sf_ui_text_light-webfont" !important;
+}
+
+/* sign in screen - start */
+.heading {
+    color: #005f86;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20;
+ }
+
+ .lbl
+ {
+     text-align: center;
+ }
+
+ .btnFacebook
+ {
+    font-size: 20;
+    color: white;
+    background: #005f86;
+    width: 70%;
+    text-transform: none;
+    margin-top: 10;
+     height: 60;
+ }
+
+ .btnSignIn
+ {
+    font-size: 20;
+    color: #005f86;
+    background:white;
+    border-radius: 10;
+    border-width: 1;
+    border-color: #888b8d;
+    width: 85%;
+    height: 60;
+    text-transform: none;
+    font-weight: 500;
+    margin-top: 15;
+ }
+ .btnRefer
+ {
+    font-size: 25;
+    color: #005f86;
+    background:white;
+    border-radius: 10;
+    border-width: 1;
+    border-color: #888b8d;
+    width: 65%;
+    height: 60;
+    text-transform: none;
+    font-weight: 500;
+    margin-top: 15;
+ }
+
+ 
+
+
+ .inputStackLayout
+ {
+    border-width: 0 0 1 0;
+    border-color: #888b8d;
+    width:90%;
+    margin-top: 15;
+
+ }
+ .inputStackLayout_refer
+ {
+ border-width: 0 0 1 0;
+    border-color: #888b8d;
+    width:90%;
+    margin-top: 10;
+    
+ }
+
+ .fontten
+ {
+     font-size: 15;
+ }
+
+ .mar15
+ {
+     margin-top: 10;
+ }
+.forgottext
+{
+    text-align: center;
+    margin-top: 15;
+    margin-bottom: 15;
+    font-size: 20;
+
+}
+.referText
+  {
+  font-size: 30;
+  margin: 5;
+  text-align: center;
+  color:#888b8d;
+  }
+  .premiumText
+  {
+  font-size: 15;
+  text-align: center;
+  color:#888b8d;
+  }
+  .premiumTextBold
+  {
+  font-weight: bold;
+  font-size: 20;
+  text-align: center;
+  color:#888b8d;
+  }
+
+  .mar_top
+  {
+   margin-top: 20;
+  }
+
+
+
+
+ /* sign in screen - end */
+
+ .card{
+    background-color: red;
+    padding:20 20;
+    margin:5 5;
+    border-width:1;
+    border-color: #eeeeee;
+    border-radius: 15;
+  }
+  .signinupTextfield
+  {
+  font-size:20;
+  width:80%;
+  margin-bottom:-5;
+  margin-left:5;
+  color:#888b8d;
+  }
+  .signinupLable
+  {
+  font-size:15;
+  color:#FF5755;
+  text-align: center;
+  }
+
+  .blue_link
+  {
+  color: #005f86;
+  margin-left: 10;
+  }

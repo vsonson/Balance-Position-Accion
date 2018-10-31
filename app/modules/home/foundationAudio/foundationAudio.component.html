@@ -1,0 +1,31 @@
+<StackLayout width="100%" style="background-color: #FFF">
+	<FlexboxLayout justifyContent="space-between" width="100%">
+		<Image src="" width="20" height="20" ></Image>
+		<Image src="" width="20" height="20" ></Image>
+		<Image src="res://x_grey"  width="40" height="40" [nsRouterLink]="['/home/practice']"></Image>
+	</FlexboxLayout>
+
+	<FlexboxLayout justifyContent="center">
+		<label text="Foundation Program:"   style="font-size: 30;"></label>
+	</FlexboxLayout>
+
+	<FlexboxLayout justifyContent="center">
+		<label [text]="itemData.type"   style="font-size: 30;"></label>
+	</FlexboxLayout>
+	<FlexboxLayout justifyContent="center" style="margin-top: 50;">
+		<Image src="{{playerStatus.playing ? 'res://pause' : 'res://play'}}" width="80" height="80" (tap)="togglePlay()"  ></Image>
+	</FlexboxLayout>
+
+	<GridLayout class="m-15" rows="auto auto" columns="50 * 50">
+	    <Label row="0" colSpan="3" class="h2 p-15" [text]="currentValue | number:'2.2'" textWrap="true"></Label>
+	    <!-- <Label row="1" col="0" text="&#xe90b;" textWrap="true" fontSize="15" class="icon"></Label> -->
+	    <Slider row="1" col="1" [value]="playerStatus.percentage" (valueChange)="onSliderValueChange($event)" minValue="0" maxValue="100"></Slider>
+	    <!-- <Label row="1" col="2" text="&#xe90b;" textWrap="true" fontSize="20" class="icon"></Label> -->
+    </GridLayout>
+
+		
+
+
+
+
+</StackLayout>

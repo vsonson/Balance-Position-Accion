@@ -1,0 +1,37 @@
+<StackLayout width="100%" style="background-color: #FFF">
+	<FlexboxLayout justifyContent="space-between" width="100%">
+		<Image src="" width="20" height="20" ></Image>
+		<Image src="" width="20" height="20" ></Image>
+		<Image src="res://x_grey"  width="40" height="40" (tap)="pause()"></Image>
+	</FlexboxLayout>
+
+	<FlexboxLayout justifyContent="center">
+		<label text="Foundation Program:"   style="font-size: 30;"></label>
+	</FlexboxLayout>
+
+	
+
+	<FlexboxLayout justifyContent="center">
+	<label text="Episode 1"   style="font-size: 30;"></label>
+	</FlexboxLayout>
+<FlexboxLayout justifyContent="center" style="margin-top: 50;" [visibility]="videoStatus == 'start' ? 'visible' : 'collapse'">
+	<Image src="res://play" width="80" height="80" (tap)="playAudio()"  ></Image>
+</FlexboxLayout>
+<FlexboxLayout justifyContent="center" style="margin-top: 50;" [visibility]="videoStatus == 'pause' ? 'visible' : 'collapse'">
+	<Image src="res://play" width="70" height="70" (tap)="playAudio()" ></Image>
+</FlexboxLayout>
+<GridLayout
+	[attr.visibility]="videoStatus == 'playing'? 'visible' : 'collapse'"
+>
+	<VideoPlayer
+      src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+      id="nativeVideoPlayer"
+      height="600"
+      
+      ></VideoPlayer>
+  </GridLayout>
+
+
+
+
+</StackLayout>

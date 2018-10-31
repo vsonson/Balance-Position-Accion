@@ -1,0 +1,143 @@
+@import './../../sass/variables.sass'
+._hmlayout
+	&.blur
+		background-color: #000000
+		opacity: 0.2
+	&>._header
+		height: 47
+		width: 100%
+		background-color: #fff
+		display: flex
+		align-items: center
+		&>._ttl
+			align-items: center
+			color: #444
+			font-size: 21px
+			display: flex
+			flex-grow: 1
+			padding-left: 35px
+		&>._mn
+			min-height: 70
+			height: 70
+			align-items: center
+			padding: 0 11px
+			display: flex
+			justify-content: center
+			&>._mn-icon
+				color: #444
+				font-size: 31px
+				width: 70px
+				height: 70px
+				margin: 0
+				padding: 0
+	& ._info
+		height: 141
+		border-color: $border-light-color
+		border-bottom-width: 2px
+		border-bottom-style: solid
+		background-color: #fff
+		&>.slide-item
+			width: 100%
+			height: 100%
+			&.swipeLeft
+				// animation-name: swipeLeft
+				// animation-duration: 0.3s
+				// animation-timing-function: ease-in-out
+			&.swipeRight
+				// animation-name: swipeRight
+				// animation-duration: 0.3s
+				// animation-timing-function: ease-in-out
+			& ._plabkicn
+				width: 160
+				height: 100%
+				align-items: center
+				justify-content: center
+				margin-left: 40%
+				flex-direction: column
+				width: 50%
+				&>Image
+					width: 100%
+					height: auto
+				&>Label
+					font-weight: bold
+					color: #005f86
+					font-size: 17px
+					letter-spacing: 0.04em
+					margin-top: 5px
+					text-align: center
+
+			& ._icns
+				margin-left: 80%
+				height: 100%
+				flex-direction: column
+				&>FlexboxLayout
+					height: 50%
+					align-items: center
+		&>._dots
+			height: 40px
+			align-items: center
+			justify-content: center
+			width: 40%
+			z-index: 3
+			&>Label
+				width: 11
+				height: 11
+				border-radius: 50em
+				border-width: 3px
+				border-color: $primary
+				border-style: solid
+				margin: 0 11px
+				&.active
+					background-color: $primary
+		& ._usr
+			height: 100%
+			width: 40%
+			align-items: center
+			justify-content: flex-start
+			flex-direction: column
+			&>Image
+				width: 90
+				top: 0
+				left: 20
+				height: 90
+				max-height: 80%
+				color: $primary
+			&>._txt
+				font-size: 16px
+				color: $primary
+				font-weight: bold
+				top: 87
+				left: 50
+	& ._nav-items
+		border-color: $border-light-color
+		border-bottom-style: solid
+		border-bottom-width: 2px
+		height: 101
+		align-items: center
+		&>._avtar
+			height: 69
+			width: 69
+			border-radius: 17
+			margin-left: 29px
+			margin-right: 43px
+			align-items: center
+			justify-content: center
+		&>._txt
+			font-size: 29px
+			color: #777
+			flex-grow: 1
+		&>.nav-arw-icon
+			min-width: 67
+			text-align: center
+			font-size: 33px
+			color: $primary
+	&>._bottom-bar
+
+
+
+	.sideStackLayout
+		border-left: 9px
+		border-style: solid
+		border-color: #d9d9d9
+
+	

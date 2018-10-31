@@ -1,0 +1,44 @@
+<AbsoluteLayout height="100%" width="100%" *ngIf="init"	>
+	<FlexboxLayout class="my-playbook" height="100%" width="100%">
+		<FlexboxLayout class="_header">
+			<Image src="res://back" class="_bck"  width="30" height="30" (tap)="goBack()"></Image>
+            <Label text="My Playbook" class="_ttl"></Label> 
+            <Image src="res://playbook_old_blue" class="_img"  width="50" height="50"></Image>
+		</FlexboxLayout>
+		<FlexboxLayout class="_sub-header">
+			<Label [text]="playbookList[swipeLayoutIndex].name" class="_sub-ttl" ></Label> 
+		</FlexboxLayout>
+		<FlexboxLayout class="_bar-container">
+			<FlexboxLayout class="_avtr">
+				<FlexboxLayout *ngFor="let item of [0,1,2]; let index=index ">
+					<Image [src]="playbookList[swipeLayoutIndex].img" *ngIf="playbookList[swipeLayoutIndex].order == index"></Image>
+				</FlexboxLayout>
+			</FlexboxLayout>
+			<FlexboxLayout class="_bars">
+				<FlexboxLayout class="arrow">
+					<FlexboxLayout *ngFor="let item of [0,1,2]; let index=index ">
+						<FlexboxLayout [ngClass]="{'_green': (index==0), '_yellow': (index==1), '_red': (index==2)}" *ngIf="playbookList[swipeLayoutIndex].order == index"></FlexboxLayout>
+					</FlexboxLayout>
+				</FlexboxLayout>
+				<FlexboxLayout class="_bar">
+					<Label class="_green"></Label>
+					<Label class="_yellow"></Label>
+					<Label class="_red"></Label>
+				</FlexboxLayout>
+			</FlexboxLayout>
+		</FlexboxLayout>
+		<FlexboxLayout  class="content" [class.swipe-left]="(swipeLayoutDirection === 2)" [class.swipe-right]="(swipeLayoutDirection === 1)">
+			<ScrollView orientation="vertical" (swipe)="onSwipe($event)" height="100%">
+				<StackLayout [class.swipe-left]="(swipeLayoutDirection === 2)" [class.swipe-right]="(swipeLayoutDirection === 1)" height="80%" style="margin-bottom:80;" >
+					<router-outlet></router-outlet>
+				</StackLayout>
+			</ScrollView>
+		</FlexboxLayout>
+		<FlexboxLayout class="dots">
+			<Label *ngFor="let item of playbookList; let index=index " [class.active]="index==swipeLayoutIndex"></Label>
+		</FlexboxLayout>
+	</FlexboxLayout>
+	<!-- <StackLayout height="100%" width="100%" top="0" left="0" [visibility]="loaderScope.open ? 'visible' : 'collapse'">
+		<app-loader></app-loader>
+	</StackLayout> -->
+</AbsoluteLayout>

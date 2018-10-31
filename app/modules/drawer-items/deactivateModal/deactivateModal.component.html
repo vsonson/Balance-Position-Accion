@@ -1,0 +1,45 @@
+<Page loaded="loaded" height="70%" width="100%">
+   <StackLayout class="modal-view-style modal"  verticalAlignment="top" >
+  <FlexboxLayout justifyContent="space-between">
+	<Image src="" width="20" height="20" ></Image>
+	<Image src="" width="20" height="20" ></Image>
+	<Image src="res://x_grey"  width="50" height="50" (tap)="close(true)"></Image>
+	</FlexboxLayout>
+	<FlexboxLayout justifyContent="center">
+	<label text="To finish deactivation of account, please confirm user credentials." textWrap="true"  style="font-size: 20;margin: 0 25;color:#888b8d;"></label>
+	</FlexboxLayout>
+	<StackLayout class="form">
+  <StackLayout >
+      <StackLayout class="inputStackLayoutDeactivate" orientation="horizontal">
+         <Image src="res://person_grey" width="25" height="25" stretch="aspectFill"></Image>
+         <FlexboxLayout flexDirection="column" justifyContent="flex-start">
+              <TextField class="input" hint="Name" autocorrect="false" [(ngModel)]="name" autocapitalizationType="none" style="font-size:20;width:80%;margin-bottom:-5;margin-left:5;color:#888b8d;"></TextField>
+            
+          </FlexboxLayout>
+      </StackLayout>
+      <label text="Please enter valid name" style="color:red; padding: 0 12%" *ngIf="!validationEmail"></label>
+    </StackLayout>
+  <StackLayout class="inputStackLayoutDeactivate">
+    <StackLayout  orientation="horizontal">
+     <Image src="res://password_key" width="25" height="25" stretch="aspectFill"></Image>
+     <FlexboxLayout flexDirection="column" justifyContent="flex-start">
+      <TextField class="input" hint="Password" secure="true" [(ngModel)]="password" style="font-size:20;width:80%;margin-bottom:-5;margin-left:5;color:#888b8d;"></TextField>
+    </FlexboxLayout>
+    </StackLayout>
+    <label text="Please enter valid password" style="color:red; padding: 0 12%" *ngIf="!validationPassword"></label>
+  </StackLayout>
+   <StackLayout class="inputStackLayoutDeactivate">
+       <StackLayout orientation="horizontal">
+       <Image src="res://password_key" width="25" height="25" stretch="aspectFill"></Image>
+       <FlexboxLayout flexDirection="column" justifyContent="flex-start">
+        <TextField class="input" hint="Password" secure="true" [(ngModel)]="repeatPassword" style="font-size:20;width:80%;margin-bottom:-5;margin-left:5;color:#888b8d;"></TextField>
+       
+      </FlexboxLayout>
+      </StackLayout>
+       <label text="Password not matching" style="color:red; padding: 0 12%" *ngIf="!validationRepeat"></label>
+    </StackLayout>
+  <Button text="Done" class="btnDone" (tap)="close(false)"></Button>
+</StackLayout>
+
+   </StackLayout>
+   </Page>

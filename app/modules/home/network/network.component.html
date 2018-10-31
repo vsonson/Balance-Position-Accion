@@ -1,0 +1,81 @@
+
+    <StackLayout style="background-color: #FFF">
+    <FlexboxLayout justifyContent="space-between">
+    <Image src="res://back" width="30" height="30" style="margin-left: 20; margin-top: 20" [nsRouterLink]="['/home/dashboard']"></Image>
+    <label text="myNetwork" class="heading" style="margin-top: 10"></label>
+    <Image src="" width="20" height="25" ></Image>
+    </FlexboxLayout>
+    
+     <Stacklayout  class="networkLabel" *ngIf="dataItems.length==0">
+    <Label text="Your network is a built-in support system. People in your network can view your data, be alerted when things change, and receive weekly balance reports." textWrap="true"></Label>
+    <Label text=""></Label>
+    <Label text="Let's add people to your network now!" textWrap="true"></Label>
+
+    </Stacklayout> 
+    <StackLayout style="margin-top: 10%;">
+    <GridLayout rows="*" *ngIf="dataItems.length>0"  height="76%">
+            <!-- >> listview-customize-html -->
+            <RadListView 
+                [items]="dataItems"  
+                class="list-group" 
+                (itemTap)="onItemTap($event)"
+                [itemTemplateSelector]="templateSelector">
+                <ng-template tkListItemTemplate let-item="item" let-i="index" >
+                    <StackLayout>
+                        <GridLayout class="list-group-item" rows="auto,*,*,*" columns="auto, *">
+                                <Image row="0" col="0" src="res://profile_grey" class="thumb img-rounded" ></Image>
+                                <StackLayout row="0" col="1" orientation="horizontal" >
+                                    <Label [text]="item.name" class="list-group-item-heading font-24 color-grey" width="35%" ></Label>
+                                    <FlexboxLayout justifyContent="space-between" style="margin-left: 27%" width="40%">
+                                    <Image row="0" col="0" src="res://message_grey" class="thumb img-rounded " (tap)="messageNetwork(item.phone_no)"></Image>
+                                    <Image row="0" col="0"  src="res://phone" class="thumb img-rounded " (tap)="callNetwork(item.phone_no)"></Image>
+                                    </FlexboxLayout>
+                                </StackLayout>
+                            </GridLayout>
+                    </StackLayout>
+                </ng-template>
+                <ng-template tkTemplateKey="expanded" let-item="item" let-i="index" >
+                        <StackLayout>
+                        <StackLayout>
+                                <GridLayout class="list-group-item" rows="auto,*,*,*" columns="auto, *">
+                                        <Image row="0" col="0" src="res://profile_grey" class="thumb img-rounded" ></Image>
+                                        <StackLayout row="0" col="1" orientation="horizontal" >
+                                            <Label [text]="item.name" class="list-group-item-heading font-24 color-grey" width="35%" ></Label>
+                                            <FlexboxLayout justifyContent="space-between" style="margin-left: 27%" width="40%">
+                                            <Image row="0" col="0" src="res://message_grey" class="thumb img-rounded " ></Image>
+                                            <Image row="0" col="0" src="res://phone" class="thumb img-rounded " ></Image>
+                                            </FlexboxLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                        </StackLayout>
+                        <StackLayout>
+                            <GridLayout rows="auto auto auto" columns="auto *" class="m-5" >
+                                    <Label class="h3 m-15 font-20 color-grey" text="Receives myBalance Alerts" textWrap="true" row="0" col="0"   ></Label>
+                                    <Switch #switch class="m-15"   checked="false" isEnabled="false" (checkedChange)="onFirstChecked($event,item.name)" row="0" col="1" marginLeft="5"></Switch>
+                                    <Label class="h3 m-15 font-20 color-grey" text="Receives Weekly Wellness Reports" textWrap="true" row="1" col="0" ></Label>
+                                    <Switch #switch class="m-15" checked="{{item.report}}" (checkedChange)="onSecondChecked($event,item.name)" row="1" col="1"  marginLeft="5"></Switch>
+                                </GridLayout>
+                                <GridLayout rows="auto" columns="*,auto" class="m-5" >
+                                        <Label class="h3 m-15 font-20" text="Remove" textWrap="true" row="0" col="1"  (tap)="openRemoveModal(item.name)" ></Label>
+                                    </GridLayout>
+                                </StackLayout>
+
+                    </StackLayout>
+                </ng-template>
+                
+            </RadListView>
+            
+            <!-- << listview-customize-html -->
+        </GridLayout>
+        <StackLayout>
+            <Image src="res://add_blue"  width="80" height="80" horizontalAlignment="right" (tap)="openNetworkModal();"></Image>
+            </StackLayout>
+            
+    </StackLayout>
+
+    
+    
+    </StackLayout>
+    
+    
+    

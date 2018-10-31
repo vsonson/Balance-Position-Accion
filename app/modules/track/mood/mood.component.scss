@@ -1,0 +1,85 @@
+@import './../track.layout.sass';
+
+.layout
+{
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.headingLabel
+{
+    font-size: 28px;
+    text-align: center;
+    color: #005f86;
+    font-weight: 600;
+    margin-bottom: 27;
+    margin-top: 39;
+}
+.stackWidth
+{
+    width: 80%;
+    text-align: center;
+   
+}
+.alignBottom
+{
+    text-align: center;
+}
+.messagelabel
+{
+    font-size: 20;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.trackLabel
+{
+   color: #005f86;
+   font-size: 20;
+}
+.smiley
+{
+    margin-bottom: 10%;
+}
+.smiley Image {
+    height: 60;
+    width: 60;
+}
+.mar20
+{
+    margin-top: 20%;
+}
+.mar15
+{
+    margin-top: 15%;
+}
+.list
+{
+    margin: 10%;
+}
+.list>.item
+{
+    justify-content: center;
+}
+.height20
+{
+    height: 20%;
+}
+
+.marleft5
+{
+    margin-left: 15%;
+}
+
+.questionLabel
+{
+    font-size: 18px;
+    color: #005f86;
+    text-align: center;
+}
+.actions>StackLayout>Image {
+    width: 50;
+    height: 50;
+}
+.actions>StackLayout>Label {
+    font-size: 15px;
+}

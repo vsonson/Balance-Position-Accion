@@ -1,0 +1,115 @@
+@import './../../../sass/variables.sass'
+$arrow-btn-width: 21
+$arrow-btn-height: 23
+$arrow-btn-border-width: 5
+._notebook
+	height: 100%
+	width: 100%
+	flex-direction: column
+	&>._hdr_
+		height: 72
+		min-height: 72
+		align-items: center
+		justify-content: center
+		padding: 0 9px
+		&>._date
+			align-items: center
+			&>Label
+				margin: 0 15px
+				color: $primary
+				font-size: 21px
+			&>.prev, &>.next
+				align-items: center
+				&>AbsoluteLayout
+					min-width: $arrow-btn-width + $arrow-btn-border-width
+					min-width: $arrow-btn-width + $arrow-btn-border-width
+					width: $arrow-btn-width + $arrow-btn-border-width
+					height: $arrow-btn-height + $arrow-btn-border-width
+					min-height: $arrow-btn-height + $arrow-btn-border-width
+					max-height: $arrow-btn-height + $arrow-btn-border-width
+					max-width: $arrow-btn-width + $arrow-btn-border-width
+					&>button
+						min-width: $arrow-btn-width
+						width: $arrow-btn-width
+						height: $arrow-btn-height
+						min-height: $arrow-btn-height
+						max-height: $arrow-btn-height
+						max-width: $arrow-btn-width
+						top: ($arrow-btn-border-width / 2)
+						left: ($arrow-btn-border-width / 2)
+						clip-path: polygon(0% 50%, 100% 0%, 100% 100%)
+						z-index: 3
+						background-color: #fff	
+						&._border
+							min-width: $arrow-btn-width + $arrow-btn-border-width
+							width: $arrow-btn-width + $arrow-btn-border-width
+							height: $arrow-btn-height + $arrow-btn-border-width
+							min-height: $arrow-btn-height + $arrow-btn-border-width
+							max-height: $arrow-btn-height + $arrow-btn-border-width
+							max-width: $arrow-btn-width + $arrow-btn-border-width
+							left: -1
+							top: 0
+							z-index: 1
+							background-color: $primary
+				&.active
+					&>AbsoluteLayout
+						&>button
+							background-color: $primary
+			&>.next
+				transform: rotate(180deg)
+	&>._cont
+		flex-grow: 1
+		& .list
+			& ._item
+				flex-direction: column
+				padding: 7 9
+				border-width: 1px 0px 0px 0px
+				border-style: solid
+				border-color: #b9b9b9
+				&>._label
+					align-items: center
+					&>._nm
+						color: $primary
+						font-weight: 400
+						font-size: 17px
+						width: 40%
+					&>._note
+						font-weight: 400
+						font-size: 12px
+						opacity: 0.7
+				&>._field
+					margin-top: 7
+					height: 40
+					width: 100%
+					&>TextView
+						border-width: 1px
+						border-style: solid
+						border-color: #b0b0b0
+						height: 100%
+						flex-grow: 1
+						border-radius: 3px
+						font-size: 12px
+					&>Button
+						width: 40
+						height: 100%
+						color: #fff
+						background-color: $primary
+						display: inline-flex
+						align-items: center
+						justify-content: center
+				&.selected
+					margin: 13 0
+					&>._label
+						&>._nm
+							font-weight: bold
+					&>._field
+						animation-name: accordianAnim
+						animation-duration: 1s
+
+
+
+@keyframes accordianAnim
+	from
+		opacity: 0
+	to
+		opacity: 1

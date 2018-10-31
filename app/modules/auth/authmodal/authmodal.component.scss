@@ -1,0 +1,103 @@
+.lgnlayout {
+      height: 100%;
+      flex-direction: column;
+  }
+  .lgnlayout .pageTitle {
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    height: 120px;
+}
+
+.lgnlayout>.list {
+    flex-grow: 1;
+    flex-direction: column;
+    
+}
+.lgnlayout>.list>.item {
+    margin: 41px 0;
+    justify-content: center;
+}
+.smallLabel {
+   font-size: 18px;
+   
+}
+.dots {
+    align-items: center;
+    justify-content: center;
+    margin: 9px 0;
+    margin-bottom: 33px;
+    margin-left:130px !important;
+    z-index: 3;
+}
+
+.skip-container {
+  justify-content: flex-end;
+  z-index: 4;
+  width: 100%;
+  margin-bottom: 140px;
+}
+
+
+.dots>Label {
+    border-color: #015F8A;
+    border-radius: 50em;
+    border-width: 4px;
+    border-style: solid;
+    width: 24px;
+    height: 24px;
+    margin: 0 13px;
+}
+
+.dots>Label.active {
+    background-color: #015F8A;
+}
+
+
+  .container{
+border-radius: 20px;
+  }
+  .p-15{
+      font-size: 16px;
+      color:#015F8A;
+      
+  }
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .slideInRight {
+    animation-name: slideInRight;
+    animation-duration: 0.3s;
+  }
+  .slideInLeft {
+      animation-name: slideInLeft;
+      animation-duration: 0.3s;
+  }
+  .modal-page {
+    background-color: transparent;
+    border-radius: 10;
+}
+.skip-label{
+  color:#015F8A;
+  
+}
+.modal-view-style{
+border:1px solid #000000;
+box-shadow: 10px 10px 5px grey;
+}

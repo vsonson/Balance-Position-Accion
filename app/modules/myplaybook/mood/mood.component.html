@@ -1,0 +1,200 @@
+<ScrollView height="100%">
+
+
+   <StackLayout class="playbook-router-layout"  visibility="{{type == 'user' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item">
+          <StackLayout class="pb-content smallLabel" visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="We’re happy to see your mood is trending positively! Keep up the good work." textWrap="true"></Label>
+              <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoNotebook()">
+                <FormattedString>
+                  <Span text="What are two things you’ve been doing that help your mood every day? Write them down in your " ></Span>
+                  <Span text="Notebook " class="underlinedtext" ></Span>
+                  <Span text=" or planner and circle them to keep your mind focused on their importance."></Span>
+                </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString >
+                  <Span text="Challenge yourself with your mindfulness practice. If you’re a bit unsure, now is a good time to try the " ></Span>
+                  <Span text="Falling Asleep Guided Meditation. " class="underlinedtext" ></Span>
+                  <Span text=" For many people it’s easier to start a healthy habit when you’re feeling good.  If you’re already in a program, add an extra day of practice to your schedule. "></Span>
+                  </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="gotoNetwork()">
+                  <FormattedString>
+                    <Span text="Reach out to someone from your " ></Span>
+                    <Span text=" Network " class="underlinedtext" ></Span>
+                    <Span text="who is always there for you, in good times and bad. Let them know that you’re feeling well, and express some gratitude for their support.  Also, make yourself available to friends and family who may need support of their own - share the love!"></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="" ></Label>    
+            </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel" visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Mood fluctuations are normal and happen to everyone. When you’re mood is trending negatively, the important thing is to take the steps needed to turn it around. Let’s get after it! " textWrap="true"></Label>
+                <Label text=""></Label>
+                  <Label textWrap="true">
+                  <FormattedString>
+                    <Span text="Did you know that spending more time outside can help boost your mood? Take 30 minutes out of each day to unplug from your phone and calendar to get some time outside. Bonus points if the sun is shining and you find a quiet garden or park. " ></Span>
+                  </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString >
+                    <Span text="When you start to feel down, take control of your breathing and thoughts by tuning into the " ></Span>
+                    <Span text=" Box Breathing " class="underlinedtext" ></Span>
+                    <Span text=" mindfulness exercise. Continually manage stress with increased practice. "></Span>
+                    </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString>
+                      <Span text="Give your mind a break by doing something fun with a friend. Connecting with people who make us happy can help us feel better. Reach out to someone in your " ></Span>
+                      <Span text=" Network " class="underlinedtext" ></Span>
+                      <Span text=" and make plans to grab food, watch a movie, go see a game, or just hang out. "></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+              </StackLayout>
+              </StackLayout>
+         
+
+              
+            <StackLayout class="pb-content smallLabel" visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Things will get better. We’ve just got some work to do. It’s important to take action now to get back on the right track. " textWrap="true"></Label>
+                <Label text=""></Label>
+                  <Label textWrap="true"  text='What could be contributing to your low mood? '></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/static/champion/you-snooze-you-win/')" text='Are you getting enough sleep? ' class="underlinedtext" (tap)="goToUrl('http://www.ncaa.org/static/champion/you-snooze-you-win/')"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text='What does your diet look like? ' class="underlinedtext" (tap)="goToUrl('http://www.sportsrd.org/wp-content/uploads/2015/07/Healthy-Grocery-Shopping.pdf')"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text='Are you partying too much?' class="underlinedtext" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/SSI_Substance%20Use%20Infographic_20170725.pdf')"></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoNotebook()">
+                  <FormattedString>
+                    <Span text=" In your " ></Span>
+                    <Span text=" Notebook," class="underlinedtext" ></Span>
+                    <Span text=" write down two changes you can make to help improve your mood." ></Span>
+                  </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+                <Label text="Ways to improve mood:"></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString>
+                    <Span text="i.    Listen to the " ></Span>
+                    <Span text=" Balance Fundamental Program." class="underlinedtext" ></Span>
+                  </FormattedString>
+                </Label>
+                <Label text="ii.  Spend an extra 30 minutes each day outside." textWrap="true"></Label>
+                <Label text="iii. Cook one new healthy recipe for yourself each week." textWrap="true"></Label>
+                <Label text="iv.  Aim to get 8 hours of sleep each night. " textWrap="true"></Label>
+          
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoNetwork()">
+                    <FormattedString >
+                    <Span text="Connect with a friend. Reach out to people in your " ></Span>
+                    <Span text="Network" class="underlinedtext" ></Span>
+                    <Span text=" who are there for you. Confide in them about how you’re feeling to get it off your chest. Afterwards, do an "></Span>
+                    <Span text=" activity " class="underlinedtext" ></Span>
+                    <Span text=" together." ></Span>
+                    </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true" >
+                    <FormattedString>
+                      <Span text="Reach out to a health professional like a doctor, psychologist, psychiatrist, or athletic trainer to help you get a plan in place for improving your mood. They will have a helpful perspective on actions you can take. " ></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+                <Label textWrap="true" (tap)="gotoResources()">
+                    <FormattedString>
+                        <Span text="*Remember, text and call options in the "></Span>
+                        <Span text=" Resources " class="underline"></Span>
+                        <Span text=" page are always available in the event of emergency."></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+              </StackLayout>
+         
+              <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+    
+              </StackLayout>
+            </StackLayout>
+
+      </FlexboxLayout> 
+
+       
+  </StackLayout>
+
+
+  <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Nurture their good mood by sending ( text message icon) them a funny picture or reminding them of a funny moment shared by the two of you. A friend connecting with them will be another positive moment in their day. "></Label>
+                 
+                  <Label textWrap="true" (tap)="goToUrl('https://www.mindsetworks.com/science/Impact')">
+                    <FormattedString>
+                      <Span text="The next time mood comes up in conversation, tell them you’ve noticed how they’ve been feeling well, and ask what they’ve been doing to keep the momentum going. Reinforcing their positive actions is a great way to cultivate a "></Span>
+                      <Span text="growth mindset." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sport-science-institute/mind-body-and-sport-potential-barriers-accessing-mental-health-services')">
+                    <FormattedString>
+                      <Span text="The next time mood comes up in conversation, tell them you’ve noticed how they’ve been feeling well, and ask what they’ve been doing to keep the momentum going. Reinforcing their positive actions is a great way to cultivate a "></Span>
+                      <Span text="specific barriers that may get in the way of care-seeking" class="underline"></Span>
+                      <Span text="when help is needed. Lead with empathy and cultivate a care-seeking environment."></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="If someone is in a bad mood, they likely will not respond well if you directly ask about their mood. Start by discussing something not related to their mood that will connect the two of you, and then it’ll be easier to probe on their mood once their guard is down a bit."></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Stress, anxiety, and pressure can affect mood. Recommend listening to the "></Span>
+                      <Span text=" Mindfulness for Performance program. " class="underline"></Span>
+                      <Span text=" to practice taking control of CNS arousal and thoughts."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" text="Shoot them a message (message icon) and ask them to come out and do something productive with you. Even if you get them to go food shopping with you, getting up and out of the house can help get their mind off of their mood and in better spirits. Often completing simple everyday tasks, like food shopping, can help break the cycle of negative thinking associated with low mood. "></Label>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Reach out! (message and call icon)  However you are comfortable - text, call, email, stop by - let them know you are aware they may be struggling and that you’d like to help. Come from a place of empathy and care when you're talking with them. Try not to judge or make big, life-changing recommendations in this vulnerable moment; rather, listen with genuine interest and reassure them you are there to help."></Label>
+                  < 
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="Help them find the appropriate healthcare professionals " class="underline"></Span>
+                      <Span text="in their Network - athletic trainers, sports psychologists, personal doctors, etc. If they don’t have any in their network, discuss resources that are available to them through the school or other means. Help them make an appointment to meet with someone if they are receptive to the idea and consider accompanying them."> </Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+  -->
+
+</ScrollView>

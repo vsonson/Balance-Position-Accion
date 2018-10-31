@@ -1,0 +1,141 @@
+<Page loaded="loaded" class="networkHeight" *ngIf="addNetworkForm||turnOffBalance||turnOffWellness||removeNetwork" height="60%">
+
+  <StackLayout class="modal-view-style modal" verticalAlignment="top">
+    <FlexboxLayout justifyContent="space-between">
+      <Image src="" width="20" height="30"></Image>
+      <Image src="" width="20" height="30"></Image>
+      <Image src="res://x_grey" width="30" height="30" (tap)="closeDirectModal()"></Image>
+    </FlexboxLayout>
+
+    <FlexboxLayout flexDirection="column" marginLeft="18" marginRight="18">
+      <!-- <StackLayout class="font-22 color-grey" >
+
+        <label text="Your request has been sent!" textWrap="true" class="bold_text_refer" ></label> -->
+
+        <!-- <label>
+          <FormattedString>
+            <Span [text]="name"></Span>
+            <Span text="has been added to your Network."></Span>
+
+          </FormattedString>
+        </label> 
+     <label text="Customize your share settings with Mom by selecting the avatar!" textWrap="true" class="bold_text_refer" ></label>
+      </StackLayout> -->
+
+      <StackLayout class="font-18 color-grey" *ngIf="removeNetwork">
+
+        <label textWrap="true">
+          <FormattedString>
+            <Span text="If you remove "></Span>
+            <Span [text]="name"></Span>
+            <Span text=" from your network he will no long have access to your"></Span>
+            <Span text=" myBalance Status Alerts or Weekly Wellness Reports."></Span>
+          </FormattedString>
+        </label>
+
+
+        <label textWrap="true" paddingTop="20">
+          <FormattedString>
+            <Span text="Are you sure you want to remove, "></Span>
+            <Span [text]="name"></Span>
+            <Span text="?"></Span>
+
+          </FormattedString>
+
+        </label>
+      </StackLayout>
+
+      <StackLayout class="color-grey font-18" *ngIf="turnOffWellness">
+        <label textWrap="true" style="text-align: center;">
+          <FormattedString>
+            <Span text="If you turn off alerts, "></Span>
+            <Span [text]="name"></Span>
+            <Span text=" will no longer receive weekly wellness reports"></Span>
+            <Span text=" alerts on your behalf."></Span>
+          </FormattedString>
+        </label>
+        <label text="The alerts help your network know" horizontalAlignment="center" textWrap="true" paddingTop="15"></label>
+        <label text="when and how to" horizontalAlignment="center" paddingTop="15"></label>
+        <label text=" best support you" horizontalAlignment="center"></label>
+        <label text="Do you still want to turn off alerts?" paddingTop="15" horizontalAlignment="center" textWrap="true"></label>
+      </StackLayout>
+
+      <StackLayout class="font-18 color-grey" *ngIf="turnOffBalance">
+        <label textWrap="true" style="text-align: center;">
+          <FormattedString>
+            <Span text="If you turn off alerts, "></Span>
+            <Span [text]="name"></Span>
+            <Span text=" will no longer receive myBalance Status"></Span>
+            <Span text=" alerts on your behalf."></Span>
+          </FormattedString>
+        </label>
+        <label text="The alerts help your network know" horizontalAlignment="center" textWrap="true" paddingTop="15"></label>
+        <label text="when and how to" horizontalAlignment="center" paddingTop="15"></label>
+        <label text=" best support you" horizontalAlignment="center"></label>
+        <label text="Do you still want to turn off alerts?" paddingTop="15" horizontalAlignment="center" textWrap="true"></label>
+      </StackLayout>
+
+      <StackLayout class="form" *ngIf="addNetworkForm">
+        <FlexboxLayout justifyContent="center">
+          <label text="Network Connect Request" class="color_blue font-18"></label>
+        </FlexboxLayout>
+        <StackLayout class=" inputStackLayout font-16" orientation="horizontal" padding="0">
+          <TextField class="input signinupTextfield" hint="Name" #name="ngModel" [(ngModel)]="networkName" autocorrect="false" autocapitalizationType="none"
+            required></TextField>
+
+        </StackLayout>
+
+        <StackLayout *ngIf="errorStatus.name">
+          <Label class="signinupLable" *ngIf="name.errors.required" text="Please enter your name"></Label>
+        </StackLayout>
+
+        <StackLayout class="inputStackLayout" orientation="horizontal" padding="0">
+          <TextField class="input signinupTextfield" hint="Email" keyboardType="email"  #email="ngModel"  name="email" [(ngModel)]="networkEmail" 
+            required></TextField>
+        </StackLayout>
+        <StackLayout *ngIf="errorStatus.email">
+          <Label class="signinupLable" *ngIf="email.errors.required" text="Please enter your email"></Label>
+          <Label class="signinupLable" *ngIf="!email.errors.required && email.errors.email" text="Please enter your email"></Label>
+        </StackLayout>
+        <StackLayout class="inputStackLayout" orientation="horizontal" padding="0">
+          <TextField class="input signinupTextfield" hint="Phone" minLength="10" maxLength="10" keyboardType="number"  #name="ngModel" #phone="ngModel"  name="phone" [(ngModel)]="networkPhone" 
+            required></TextField>
+        </StackLayout>
+
+        <StackLayout *ngIf="errorStatus.phone">
+          <Label *ngIf="phone.errors.required" text="Please enter your phone number" class="signinupLable"></Label>
+        </StackLayout>
+
+      </StackLayout>
+
+
+    </FlexboxLayout>
+
+    <FlexboxLayout justifyContent="center" paddingTop="10" *ngIf="addNetworkForm">
+      <Button text="Send" class="btnNetwork" (tap)="addNetwork()"></Button>
+    </FlexboxLayout>
+    <FlexboxLayout justifyContent="center" paddingTop="20" *ngIf="turnOffBalance||turnOffWellness">
+      <Button text="Turn Off" class="btnNetwork" (tap)="submitMynetwork()"></Button>
+    </FlexboxLayout>
+    <FlexboxLayout justifyContent="center" paddingTop="55" *ngIf="removeNetwork">
+      <Button text="Remove" class="btnNetwork" (tap)="submitMynetwork()"></Button>
+    </FlexboxLayout>
+
+
+  </StackLayout>
+</Page>
+<Page loaded="loaded" *ngIf="successMessage" height="20%">
+  <StackLayout>
+    <FlexboxLayout justifyContent="space-between">
+      <Image src="" width="20" height="30"></Image>
+      <Image src="" width="20" height="30"></Image>
+      <Image src="res://res_grey" width="30" height="30" (tap)="close()"></Image>
+    </FlexboxLayout>
+    <FlexboxLayout justifyContent="center">
+      <label text="Your request has been sent!" textWrap="true" class="font-22 color-grey"></label>
+    </FlexboxLayout>
+    <FlexboxLayout justifyContent="center" >
+      <Button text="Ok" class="btnNetwork" (tap)="close()"></Button>
+    </FlexboxLayout>
+  </StackLayout>
+</Page>

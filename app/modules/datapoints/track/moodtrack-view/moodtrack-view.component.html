@@ -1,0 +1,50 @@
+
+<StackLayout orientation="vertical" class="layout">
+
+  <StackLayout orientation="horizontal" verticalAlignment="top">
+    <Image src="res://back"  style="color:#0B6084;" width="30" height="30" stretch="aspectFill" verticalAlignment="center" (tap)="goBack()"></Image>
+    <Label text="SomeDate" class="headingLabel" verticalAlignment="center"></Label>
+    <Image src="res://back" width="30" height="30"></Image>
+  </StackLayout>
+  
+  <Label text="Mood" class="headingLabel mar20"></Label>
+  <app-notedialogbox *ngIf="isMakeNote" [dialogData]="myStr"></app-notedialogbox>
+
+  <Label text="How are you feeling?" class="messagelabel" horizontalAlignment="center" verticalAlignment="center"></Label>
+
+  <StackLayout orientation="horizontal" horizontalAlignment="center" class="height30">
+    <StackLayout (tap)="awful()">
+        <Image src="res://mood_awful_grey" width="40" height="40"></Image>
+        <Label text="Awful" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="bad()">
+        <Image src="res://mood_bad_grey" width="40" height="40"></Image>
+        <Label text="Bad" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="ehhh()">
+        <Image src="res://mood_ehh_grey" width="40" height="40"></Image>
+        <Label text="Ehhh" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="good()">
+        <Image src="res://mood_good_grey" width="40" height="40"></Image>
+        <Label text="Good" horizontalAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout (tap)="great()">
+        <Image src="res://mood_great_grey" width="40" height="40"></Image>
+        <Label text="Great" horizontalAlignment="center"></Label>
+    </StackLayout>
+  </StackLayout>
+
+<StackLayout  orientation="horizontal" horizontalAlignment="center" class="stackWidth">
+  <StackLayout (tap)="openNote()">
+    <Image src="res://notebook_blue"  width="30" height="30" stretch="aspectFill" horizontalAlignment="center"></Image>
+    <Label text="Make A Note" class="trackLabel" horizontalAlignment="center"></Label> 
+  </StackLayout>
+  <StackLayout (tap)="done()" class="marleft5"> 
+    <Image src="res://check_blue"  width="30" height="30" stretch="aspectFill" horizontalAlignment="center"></Image>
+    <Label text="Done" class="trackLabel" horizontalAlignment="center"></Label>
+  </StackLayout>
+</StackLayout>
+
+
+</StackLayout>

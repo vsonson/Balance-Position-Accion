@@ -1,0 +1,212 @@
+<ScrollView height="100%">
+   <StackLayout class="playbook-router-layout" visibility="{{type == 'user' ?  'visible' : 'collapse'}}">
+      <FlexboxLayout class="item"  >
+          <StackLayout class="pb-content smallLabel "  visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <StackLayout class="m-y-15 m-x-15">
+            <Label text="You’re not sleeping great lately so let’s take some steps to improve. " textWrap="true"></Label>
+              <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoPractice()">
+                <FormattedString>
+                  <Span text="Listen to the " ></Span>
+                  <Span text=" Falling Asleep Guided Meditation" class="underline" ></Span>
+                  <Span text="single in our mindfulness library."></Span>
+                </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label text="Audit your diet." class="underline" (tap)="goToUrl('http://www.sportsrd.org/wp-content/uploads/2015/07/Healthy-Grocery-Shopping.pdf')"></Label>
+              <Label text=""></Label>
+              <Label textWrap="true" (tap)="goToUrl('http://www.sportsrd.org/wp-content/uploads/2015/01/Caffeine_and_Athletic_Performance_WEB.pdf')">
+                  <FormattedString >
+                  <Span text=" What kinds of foods are you eating close to bedtime? "></Span>
+                  <Span text="Limit caffeine " class="underline" ></Span>
+                  <Span text="and sugar consumption throughout the day, and try herbal decaf tea before bed to calm your mind. "></Span>
+                  </FormattedString>
+              </Label>
+              <Label text=""></Label>
+              <Label textWrap="true" >
+                  <FormattedString>
+                    <Span text="Unplug. It’s more difficult to fall asleep when our minds our stimulated. TV, upbeat music, and screen time stimulate the brain. Try to dedicate the hour before bed to winding down. " ></Span>
+                  </FormattedString>
+              </Label>
+              <Label text="" ></Label>    
+            </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+                <StackLayout class="m-y-15 m-x-15">
+              <Label text="Great work! You’re sleeping well." textWrap="true"></Label>
+              <Label text="Keep working on your sleep and your likelihood for peak performance will increase." textWrap="true"></Label>
+                <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                  <FormattedString>
+                    <Span text="Listen to the " ></Span>
+                    <Span text="Balance Fundamentals Program" class="underline" ></Span>
+                    <Span text=" single."></Span>
+                  </FormattedString>
+                </Label>
+                <Label text=""></Label>
+                <Label textWrap="true">
+                    <FormattedString >
+                    <Span text="Remain disciplined with your "></Span>
+                    <Span text="before bedtime routine." ></Span>
+                    <Span text=" A steady habit will weather the curveballs of life easier. Before Bedtime Routine Ideas:"></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>  
+                <Label text="a.  Stay away from screens within an hour before bed." textWrap="true"></Label>
+                <Label text="b.  Try not to eat within an hour of going to bed." textWrap="true"></Label>
+                <Label text="c.  Limit daily caffeine intake." textWrap="true"></Label>
+                <Label text="d.  Read something calming before bed." textWrap="true"></Label>
+          
+                <Label text=""></Label>
+                <Label textWrap="true" (tap)="gotoNotebook()">
+                    <FormattedString>
+                      <Span text="Reflect in your  " ></Span>
+                      <Span text="Notebook" class="underline" ></Span>
+                      <Span text=" about 3 things you will continue to do that have helped you with your sleep." ></Span>
+                    </FormattedString>
+                </Label>
+                <Label text="" ></Label>    
+              </StackLayout>
+              </StackLayout>
+
+
+              <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="You’re sleeping poorly lately and it’s going to negatively affect your performance if it hasn’t already. Let’s figure out a way to move forward. Things will get better. We just have to put the work in. " textWrap="true"></Label>
+                  <Label text=""></Label>
+                    <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Consider talking with a health professional about your sleep. Reach out to a doctor, athletic trainer, or psychologist to get a plan in place to improve your sleep. Sleep plays a huge role in our overall " ></Span>
+                      <Span text="performance." class="underline" ></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/static/champion/you-snooze-you-win/')">
+                      <FormattedString >
+                      <Span text="Stress, anxiety, and pressure can play a role in hindering our sleep habits. Build de-stress techniques by committing to a mindfulness practice routine. Listen to the "></Span>
+                      <Span text="Balance Fundamentals" class="underline" ></Span>
+                      <Span text=" four out of seven days of the week."></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" >
+                      <FormattedString>
+                        <Span text="Commit to implementing three lifestyle changes immediately. Use your Notebook to record them.  Here are some examples: " ></Span>
+                      </FormattedString>
+                  </Label>
+                  <Label text="a.  Have all electronics turned off an hour before bed" textWrap="true"></Label>
+                  <Label text="b.  Practice Mindfulness at least 5 days per week" textWrap="true"></Label>
+                  <Label text="c.  Drink at least 10 oz of water each day " textWrap="true"></Label>
+                  <Label text="d.  Limit caffeine intake to one serving in the morning " textWrap="true"></Label>
+                  
+                  <Label textWrap="true" (tap)="gotoResources()">
+                    <FormattedString>
+                      <Span text="*Remember, text and call options in the " ></Span>
+                      <Span text="Resources" class="underline" ></Span>
+                      <Span text="  page are always available in the event of emergency."></Span>
+                    </FormattedString>
+                </Label>
+            
+                  <Label text="" ></Label>    
+                </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="pb-content smallLabel " visibility="{{color == 'gray' ? 'visible' : 'collapse'}}">
+                  <StackLayout class="m-y-15 m-x-15">
+                <Label text="Currently we do not have enough data to provide you a Playbook. Start tracking data daily and your Playbook guidance will appear here." textWrap="true"></Label>
+      
+                </StackLayout>
+              </StackLayout>
+
+      </FlexboxLayout> 
+  </StackLayout>
+
+    <!-- Network content 
+    <StackLayout class="playbook-router-layout" visibility="{{type !== 'user' ?  'visible' : 'collapse'}}" >
+        <FlexboxLayout class="item"  >
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'green' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Continue to build your relationship when they’re doing well. Maintain communication and keep asking them how they’re doing. The stronger your relationship, the more likely they will be to go to you when they need help."></Label>
+                 
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Encourage them to listen to the "></Span>
+                      <Span text="Mindful Sleep" class="underline"></Span>
+                      <Span text=" program to help with their sleep."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/static/champion/you-snooze-you-win/')">
+                    <FormattedString>
+                      <Span text="Sleep is impacted by a number of things, but increased stress, change in schedule, and lifestyle factors play a big role. Continue checking in and reminding them on how critical sleep is for "></Span>
+                      <Span text="optimal performance." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'yellow' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                  <Label textWrap="true" text="Reach out to them to ask how they’re doing (message icon). Express genuine interest in how they’re doing and their sleep, and if they open up, listen to what they’re saying, validate what they’re feeling, and give feedback if they ask for it. Sometimes, people just want to be heard."></Label>
+                  <Label text=""></Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Recommend listening to the "></Span>
+                      <Span text="Mindful Sleep" class="underline"></Span>
+                      <Span text=" program in the mindfulness library."></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="gotoPractice()">
+                    <FormattedString>
+                      <Span text="Stress plays a huge role in getting quality sleep. Ask them to join you in a "></Span>
+                      <Span text="fun activity." class="underline"></Span>
+                      <Span text="Unplug from electronics, get outside, and have some fun."></Span>
+                    </FormattedString>
+                  </Label>
+                  <StackLayout class="m-t-15 m-l-15">
+                    <Label tex="a. Activity Ideas: "></Label>
+                    <StackLayout class="m-y-15 m-l-15">
+                      <Label textWrap="true" text="i.   Making a new recipe you’ve been meaning to try"></Label>
+                      <Label textWrap="true" text="ii.  Attending a show, play, or meeting with friends you don’t see as much"></Label>
+                      <Label textWrap="true" text="iii. Participating in a school activity outside of athletics"></Label>
+                      <Label textWrap="true" text="iv.  Getting off campus to spend time in nature or exploring the culture of the area "></Label>
+                    </StackLayout>
+                  </StackLayout>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout class="pb-content smallLabel " visibility="{{color == 'red' ? 'visible' : 'collapse'}}">
+              <Label text="How to help {{user.name}}: " textWrap="true"></Label>
+              <StackLayout class="m-y-15 m-l-15">
+                 <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text="It’s time to help guide and support them to improve their sleep. Reach out to them and express your concern from a place of care. Ask how you can best help them and remind them that you have their back. "> </Span>
+                      <Span text="Know your role and be mindful of your language." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/sites/default/files/HS_Mental-Health-Best-Practices_20160317.pdf')">
+                    <FormattedString>
+                      <Span text='Recommend talking with a health professional to help guide the path to move forward. Mention utilizing resources like doctors, counseling centers, or athletic trainers.'></Span>
+                      <Span text=" Refer them when it’s time, and follow protocol." class="underline"></Span>
+                    </FormattedString>
+                  </Label>
+                  <Label textWrap="true" (tap)="goToUrl('http://www.ncaa.org/static/champion/you-snooze-you-win/')">
+                    <FormattedString>
+                       <Span text="One of the reasons" class="underline"></Span>
+                       <Span text=' athletes struggle to get enough sleep is time management. Help them prioritize their “to do” list by writing out all obligations, highlighting urgent and important items, and putting non-critical items on the backburner. '></Span>
+                    </FormattedString>
+                  </Label>
+              </StackLayout>
+            </StackLayout>
+
+        </FlexboxLayout>
+    </StackLayout>
+
+-->
+
+
+</ScrollView>

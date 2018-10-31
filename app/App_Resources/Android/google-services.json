@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "749790378660",
+    "firebase_url": "https://balance-position.firebaseio.com",
+    "project_id": "balance-position",
+    "storage_bucket": "balance-position.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749790378660:android:bb779a3704b90467",
+        "android_client_info": {
+          "package_name": "com.balanceposition.bp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749790378660-ie9vrekdb13ovj81kt9l4pjk321ps9vm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnxyiWjjn_7bi-Zsqcs2w38j9ciiiCejg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

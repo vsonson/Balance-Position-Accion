@@ -1,0 +1,84 @@
+<StackLayout>
+    <RadListView
+    #myListView [items]="datapointItems"
+    row="1"
+    (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
+    (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
+    (itemSwipeProgressChanged)="onCellSwiping($event)"
+    (itemSwiping)="onItemSwiping($event)"
+    (itemTapEvent)="itemTapEvents($event)"
+    (itemTap)="onTap($event)"
+    swipeActions="true"
+    selectionBehavior="Press"
+    width="100%"
+    height="100%"
+    >   
+    
+
+    <ng-template tkListItemTemplate let-item="item" let-index="index"  >
+    
+        <AbsoluteLayout class="listItemStackLayoutOut">
+            <StackLayout left="0" top="0" width="100%" class="listItemStackLayout" orientation="horizontal" [class.disabled]="item.disabled">
+            <FlexboxLayout class="_avtar" [backgroundColor]="getBgColor(item.color)">
+            <Image [src]="item.imageUrl" width="40" height="40"></Image>
+            </FlexboxLayout>
+            <Label class="labelName" [text]="item.name" fontSize="20" verticalAlignment="center" width="64%"></Label>
+            <Image src="res://blue_right_arrow" class="chevron" width="25" height="25"></Image>
+            <!-- <StackLayout height="1" style="background-color:gray;"></StackLayout> -->
+            </StackLayout>
+            <!-- <FlexboxLayout *ngIf="item.disabled" height="63" top="0" left="90" right="0" width="100%" [class.swipe-disabled]="item.disabled"><Label text="" backgroundColor="#fff" width="100%" height="100%"></Label></FlexboxLayout> -->
+        </AbsoluteLayout>
+    
+    </ng-template>
+    
+    <GridLayout *tkListItemSwipeTemplate>
+        <GridLayout  columns="auto, *, auto">
+            <GridLayout columns="*, *" col="0" id="left-stack" [opacity]="((datapointItems[swipeIndex] && datapointItems[swipeIndex].disabled) ? '0.4' : '1')">
+                <GridLayout col="0" class="markGridLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
+                    <StackLayout>
+                    <Image src="res://track_white" width="40" height="40" stretch="aspectFill"></Image>
+                    <Label text="Track" class="swipetemplateLabel"  verticalAlignment="center" horizontalAlignment="center"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout col="1" class="archiveGridLayout" (tap)="onMakeNoteClick($event)" id="btnArchive">
+                    <StackLayout>
+                    <Image src="res://notebook_white" width="40" height="40" stretch="aspectFill" ></Image>
+                    <Label text="Make a Note" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                    </StackLayout>
+                </GridLayout>
+                
+            </GridLayout>
+            <GridLayout columns="*" col="2" id="right-stack" >
+                <GridLayout  col="0" class="deleteGridLayout" (tap)="onRightSwipeClick($event)" id="btnDelete" [class.on]="datapointItems[swipeIndex] && datapointItems[swipeIndex].disabled">
+                    <Label [text]="(datapointItems[swipeIndex] && datapointItems[swipeIndex].disabled) ? 'Turn On Data Point' : 'Turn Off Data Point'" class="swiperighttemplateLabel" verticalAlignment="center" horizontalAlignment="center" textWrap="true" (tap)="turnOffOnDataPoint($event)"></Label>
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+    </GridLayout>
+     <ng-template tkListViewHeader>
+         <GridLayout class="_info">
+            <!-- header slides items -->
+            <AbsoluteLayout class="slide-item" width="100%">
+                <FlexboxLayout class="_usr" top="0" width="50%">
+                    <Label [text]="'mdi-person' | fonticon" class="mdi" style="color:#0B6084;" fontSize="120px"></Label>
+                </FlexboxLayout>
+                <FlexboxLayout class="_plabkicn" orientation="Vertical" width="50%">
+                    <StackLayout orientation="Horizontal" [nsRouterLink]="['/myplaybook/sleep']">
+                        <Image [src]="'res://playbook_blue'" width="50" height="50" ></Image>
+                        <Label text="Playbook" class="headerlabel"></Label>
+                    </StackLayout>
+                    <StackLayout height="18"></StackLayout>
+                    <StackLayout orientation="Horizontal" (tap)="getMyData()"  >
+                        <Image [src]="'res://share_blue'" width="50" height="50" style="margin-left:-20px;" ></Image>
+                    <StackLayout orientation="Vertical" (tap)="getMyData()">
+                        <Label text="Share" class="headerlabel" ></Label>
+                        <!-- <Label text="My Data" class="datalabel" textWrap="true"></Label> -->
+                    </StackLayout>
+                    </StackLayout>
+                </FlexboxLayout>
+            </AbsoluteLayout>
+            </GridLayout>
+    </ng-template>
+
+    </RadListView>
+</StackLayout>

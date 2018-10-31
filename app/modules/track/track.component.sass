@@ -1,0 +1,23 @@
+@import './../../sass/variables.sass'
+.track-root
+	height: 100%
+	flex-direction: column
+	&>.content_
+		flex-grow: 1
+	&>.dots
+		min-height: 29
+		height: 29
+		align-items: center
+		justify-content: center
+		&>Label
+			width: 11
+			min-width: 11
+			height: 11
+			min-height: 11
+			border-width: 2px
+			border-color: $primary
+			border-style: solid
+			margin: 0 9px
+			border-radius: 50em
+			&.active
+				background-color: $primary

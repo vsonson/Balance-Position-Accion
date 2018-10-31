@@ -1,0 +1,10 @@
+<CardView class="cardStyle" margin="10" elevation="40" radius="1" >
+	<FlexboxLayout class="bottom-bar">
+		<FlexboxLayout *ngFor="let item of items; let index=index" class="items" nsRouterLinkActive="active" [class.active]='activeIndex==index' (tap)="navigate(item.link, index)">
+			<!-- <Label class="mdi icon" [text]="item.icon | fonticon" ></Label> -->
+			<Image [src]="item.icon + (activeIndex==index ? 'blue' : 'grey')"  width="20" height="20" stretch="aspectFill" style="color:#ccc"></Image>
+			<Label class="text" [text]="item.name"></Label>
+		</FlexboxLayout>
+	    
+	</FlexboxLayout>
+</CardView>
